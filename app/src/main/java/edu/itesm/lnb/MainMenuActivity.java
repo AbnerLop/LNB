@@ -19,7 +19,6 @@ public class MainMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         ProfileFragment.OnFragmentInteractionListener,
         MenuFragment.OnFragmentInteractionListener,
-        GeneralFragment.OnFragmentInteractionListener,
         FeedingFragment.OnFragmentInteractionListener {
 
     @Override
