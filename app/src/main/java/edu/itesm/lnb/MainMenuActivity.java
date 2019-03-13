@@ -16,7 +16,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainMenuActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, ProfileFragment.OnFragmentInteractionListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        ProfileFragment.OnFragmentInteractionListener,
+        MenuFragment.OnFragmentInteractionListener,
+        GeneralFragment.OnFragmentInteractionListener,
+        FeedingFragment.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,13 +89,18 @@ public class MainMenuActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_profile) {
+        if(id == R.id.nav_menu){
+            fragment = new MenuFragment();
+            selectedFragment = true;
+        } else if (id == R.id.nav_profile) {
             fragment = new ProfileFragment();
             selectedFragment = true;
         } else if (id == R.id.nav_general) {
-
+            fragment = new GeneralFragment();
+            selectedFragment = true;
         } else if (id == R.id.nav_feeding) {
-
+            fragment = new FeedingFragment();
+            selectedFragment = true;
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
