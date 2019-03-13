@@ -95,9 +95,6 @@ public class MainMenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_profile) {
             fragment = new ProfileFragment();
             selectedFragment = true;
-        } else if (id == R.id.nav_general) {
-            fragment = new GeneralFragment();
-            selectedFragment = true;
         } else if (id == R.id.nav_feeding) {
             fragment = new FeedingFragment();
             selectedFragment = true;
