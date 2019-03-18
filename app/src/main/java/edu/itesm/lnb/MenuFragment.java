@@ -1,6 +1,7 @@
 package edu.itesm.lnb;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -60,11 +61,89 @@ public class MenuFragment extends Fragment {
         }
     }
 
+    private void goDetail(String detail){
+        Intent intent = new Intent(this.getContext(), DetailActivity.class);
+        intent.putExtra("file",detail);
+        startActivity(intent);
+    }
+
+    public void detail(View view){
+        String file = "";
+        switch(view.getId()){
+            case R.id.lactancy:
+                goDetail("Lactancy");
+                break;
+            case R.id.childhood:
+                goDetail("childhood");
+                break;
+            case R.id.youth:
+                goDetail("youth");
+                break;
+            case R.id.adult:
+                goDetail("adult");
+                break;
+            case R.id.elderly:
+                goDetail("elderly");
+                break;
+        }
+    }
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_menu, container, false);
+
+        View btn1 = rootView.findViewById(R.id.adult);
+        View btn2 = rootView.findViewById(R.id.childhood);
+        View btn3 = rootView.findViewById(R.id.lactancy);
+        View btn4 = rootView.findViewById(R.id.elderly);
+        View btn5 = rootView.findViewById(R.id.youth);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                detail(v);
+            }
+
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                detail(v);
+            }
+
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                detail(v);
+            }
+
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                detail(v);
+            }
+
+        });
+        btn5.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                detail(v);
+            }
+
+        });
+
+
+
+        return rootView;
+        /*/ Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_menu, container, false);*/
     }
 
     // TODO: Rename method, update argument and hook method into UI event
