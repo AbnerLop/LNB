@@ -5,6 +5,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +22,12 @@ import android.view.ViewGroup;
  * Use the {@link MenuFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MenuFragment extends Fragment {
+public class MenuFragment extends Fragment implements AdultFragment.OnFragmentInteractionListener,
+        ChildhoodFragment.OnFragmentInteractionListener,
+        ElderlyFragment.OnFragmentInteractionListener,
+        LactancyFragment.OnFragmentInteractionListener,
+        YouthFragment.OnFragmentInteractionListener
+{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,33 +68,51 @@ public class MenuFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+        FragmentManager fragmentManager = getFragmentManager();
+
     }
 
     private void goDetail(String detail){
+
         Intent intent = new Intent(this.getContext(), DetailActivity.class);
         intent.putExtra("file",detail);
         startActivity(intent);
     }
 
     public void detail(View view){
+        Fragment fragment = null;
+        Boolean selectedFragment = false;
+
         String file = "";
         switch(view.getId()){
             case R.id.lactancy:
-                goDetail("Lactancy");
+                fragment = new LactancyFragment();
+                selectedFragment = true;
                 break;
             case R.id.childhood:
-                goDetail("childhood");
+                fragment = new ChildhoodFragment();
+                selectedFragment = true;
                 break;
             case R.id.youth:
-                goDetail("youth");
+                fragment = new YouthFragment();
+                selectedFragment = true;
                 break;
             case R.id.adult:
-                goDetail("adult");
+                fragment = new AdultFragment();
+                selectedFragment = true;
                 break;
             case R.id.elderly:
-                goDetail("elderly");
+                fragment = new ElderlyFragment();
+                selectedFragment = true;
                 break;
         }
+        FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+        fragmentTransaction.addToBackStack("TAGG");
+        if(selectedFragment){
+            fragmentTransaction.replace(R.id.Container, fragment).commit();
+        }
+
+
     }
 
     @Override
@@ -168,6 +195,12 @@ public class MenuFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+
+
+    @Override
+    public void onAgeFragmentInteraction(Uri uri) {
     }
 
     /**

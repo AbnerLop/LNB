@@ -1,6 +1,8 @@
 package edu.itesm.lnb;
 
+import android.app.FragmentManager;
 import android.net.Uri;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,7 +21,13 @@ public class MainMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
         ProfileFragment.OnFragmentInteractionListener,
         MenuFragment.OnFragmentInteractionListener,
-        FeedingFragment.OnFragmentInteractionListener {
+        FeedingFragment.OnFragmentInteractionListener,
+        AdultFragment.OnFragmentInteractionListener,
+        ChildhoodFragment.OnFragmentInteractionListener,
+        ElderlyFragment.OnFragmentInteractionListener,
+        LactancyFragment.OnFragmentInteractionListener,
+        YouthFragment.OnFragmentInteractionListener
+{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,14 +53,24 @@ public class MainMenuActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        Fragment startingFragment = new MenuFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.Container, startingFragment).commit();
+
     }
 
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        FragmentManager fm = getFragmentManager();
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
+        }
+        else if (fm.getBackStackEntryCount() > 0) {
+            System.out.println("popping backstack");
+            fm.popBackStack();
         } else {
+            System.out.println("nothing on backstack, calling super");
             super.onBackPressed();
         }
     }
@@ -103,6 +121,7 @@ public class MainMenuActivity extends AppCompatActivity
 
         }
         if(selectedFragment){
+            getSupportFragmentManager().beginTransaction().addToBackStack("TAG");
             getSupportFragmentManager().beginTransaction().replace(R.id.Container, fragment).commit();
         }
 
@@ -113,6 +132,10 @@ public class MainMenuActivity extends AppCompatActivity
 
     @Override
     public void onFragmentInteraction(Uri uri) {
+
+    }
+
+    public void onAgeFragmentInteraction(Uri uri) {
 
     }
 }
