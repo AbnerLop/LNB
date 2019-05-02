@@ -19,7 +19,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {// a thread in Android
             @Override
             public void run() {
-                Intent intent = new Intent( SplashScreenActivity.this  , MainMenuActivity.class  );
+                Intent intent = new Intent( SplashScreenActivity.this  , LoginActivity.class  );
                 startActivity(intent); // Go, go, go
                 finish(); // kill this activity
             }
