@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "920327825898",
+    "firebase_url": "https://lnbfirebaseproject.firebaseio.com",
+    "project_id": "lnbfirebaseproject",
+    "storage_bucket": "lnbfirebaseproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920327825898:android:31ad92267d26a896",
+        "android_client_info": {
+          "package_name": "edu.itesm.lnb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920327825898-ba1eu2nnulf9k267e4skks59f4sudpnc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.itesm.lnb",
+            "certificate_hash": "5d54767180099a794fb7243d39b4d2959e8af8d8"
+          }
+        },
+        {
+          "client_id": "920327825898-as3d5ghsfq2ktj4goe7ifk0smu8cksac.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpu-tYQ2PeH0y4VNKCAzbf9HpbxWwgCaQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920327825898-as3d5ghsfq2ktj4goe7ifk0smu8cksac.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
