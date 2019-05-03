@@ -12,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class NutrimentAdapter extends RecyclerView.Adapter<NutrimentAdapter.ViewHolder> {
@@ -28,11 +29,12 @@ public class NutrimentAdapter extends RecyclerView.Adapter<NutrimentAdapter.View
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item, viewGroup, false);
+
         return new ViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(@NonNull final ViewHolder viewHolder, int i) {
         final NutrimentItem nutrimentItem = nutrimentItems.get(i);
 
         viewHolder.textViewName.setText(nutrimentItem.getName());
@@ -40,8 +42,11 @@ public class NutrimentAdapter extends RecyclerView.Adapter<NutrimentAdapter.View
         viewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                NutrimentItem nutriCard = nutrimentItems.get(viewHolder.getAdapterPosition());
                 Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
-
+                Intent it = new Intent(context, NutriCard.class);
+                it.putExtra("nutrimento", nutriCard);
+                context.startActivity(it);
             }
         });
     }

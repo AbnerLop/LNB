@@ -1,5 +1,6 @@
 package edu.itesm.lnb;
 
+import android.app.LauncherActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
@@ -120,14 +121,44 @@ public class FeedingFragment extends Fragment {
             public void onResponse(String response) {
                 progressDialog.dismiss();
                 try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    JSONArray array = jsonObject.getJSONArray("nutrimentos");
+                        JSONObject jsonObject = new JSONObject(response);
+                        JSONArray array = jsonObject.getJSONArray("nutrimentos");
+                        for (int i = 0; i < array.length(); i++){
+                            JSONObject o = array.getJSONObject(i);
+                            JSONArray elementos = o.getJSONArray("elementos");
+                            for (int j = 0; j < elementos.length(); j++){
+                                JSONObject elemento = elementos.getJSONObject(j);
+                                String elementoName = elemento.getString("nombre");
+                                JSONArray recetas = elemento.getJSONArray("recetas");
+                                List<RecetaItem> recetaItems = new ArrayList<>();
+                                for (int k = 0; k < recetas.length(); k++){
+                                    JSONObject receta = recetas.getJSONObject(k);
+                                    String titulo = receta.getString("titulo");
+                                    JSONArray ingredientes = receta.getJSONArray("ingredientes");
+                                    List<String> ingredientesList = new ArrayList<String>();
+                                    for(int l = 0; l < ingredientes.length(); l++){
+                                        JSONObject ingrediente = ingredientes.getJSONObject(l);
+                                        ingredientesList.add(ingrediente.getString("nombre"));
+                                    }
+                                    RecetaItem recetaItem = new RecetaItem(
+                                            titulo,
+                                            ingredientesList,
+                                            receta.getString("preparacion")
+                                    );
+                                    recetaItems.add(recetaItem);
+                                }
 
-                    for (int i = 0; i<array.length(); i++){
-                        JSONObject o = array.getJSONObject(i);
-                        NutrimentItem item = new NutrimentItem(o.getString("nombre"));
-                        listItems.add(item);
-                    }
+                                NutrimentItem item = new NutrimentItem(
+                                        elementoName,
+                                        recetaItems
+
+                                );
+                                listItems.add(item);
+                            }
+                        }
+
+
+
 
                     adapter = new NutrimentAdapter(listItems, getActivity());
                     recyclerView.setAdapter(adapter);

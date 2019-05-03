@@ -1,15 +1,22 @@
 package edu.itesm.lnb;
 
-public class NutrimentItem {
-    private String Name;
+import java.io.Serializable;
+import java.util.List;
 
-    public NutrimentItem(String name) {
+public class NutrimentItem implements Serializable {
+    private String Name;
+    private List<RecetaItem> recetas;
+
+    public NutrimentItem(String name, List<RecetaItem> recetas) {
         Name = name;
+        this.recetas = recetas;
     }
 
     public String getName() {
         return Name;
     }
 
-
+    public List<RecetaItem> getRecetas() {
+        return recetas;
+    }
 }
