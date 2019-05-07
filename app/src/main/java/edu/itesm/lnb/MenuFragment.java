@@ -68,8 +68,8 @@ public class MenuFragment extends Fragment implements AdultFragment.OnFragmentIn
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        FragmentManager fragmentManager = getFragmentManager();
 
+        FragmentManager fragmentManager = getFragmentManager();
     }
 
     private void goDetail(String detail){
