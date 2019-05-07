@@ -2,6 +2,7 @@ package edu.itesm.lnb;
 
 import android.app.FragmentManager;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Bundle;
@@ -18,13 +19,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.firebase.ui.auth.AuthUI;
+import com.google.firebase.auth.FirebaseAuth;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
@@ -38,6 +43,8 @@ public class MainMenuActivity extends AppCompatActivity
         YouthFragment.OnFragmentInteractionListener
 {
 
+    TextView userMail;
+    TextView userName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +75,7 @@ public class MainMenuActivity extends AppCompatActivity
         Fragment startingFragment = new MenuFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.Container, startingFragment).commit();
 
+        loadUser();
     }
 
     @Override
@@ -100,10 +108,10 @@ public class MainMenuActivity extends AppCompatActivity
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        /*/noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
-        }
+        }*/
 
         return super.onOptionsItemSelected(item);
     }
@@ -152,6 +160,7 @@ public class MainMenuActivity extends AppCompatActivity
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
+
         return true;
     }
 
@@ -161,6 +170,19 @@ public class MainMenuActivity extends AppCompatActivity
     }
 
     public void onAgeFragmentInteraction(Uri uri) {
+
+    }
+
+    private void loadUser(){
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        NavigationView navigationView = findViewById(R.id.nav_view);
+        View headerView = navigationView.getHeaderView(0);
+        TextView navUsername = (TextView) headerView.findViewById(R.id.userName);
+        TextView navMail = (TextView) headerView.findViewById(R.id.userMail);
+        ImageView navImage = headerView.findViewById(R.id.navImage);
+
+        navUsername.setText(user.getDisplayName());
+        navMail.setText(user.getEmail());
 
     }
 }

@@ -10,14 +10,12 @@
 
     <Button
         android:id="@+id/lactancy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="116dp"
+        android:layout_height="109dp"
         android:layout_marginStart="45dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="29dp"
         android:background="@drawable/lactancy"
-        app:layout_constraintBottom_toTopOf="@+id/lactancyText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,58 +23,50 @@
 
     <TextView
         android:id="@+id/lactancyText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="122dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="8dp"
         android:text="Lactancia"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/youth"
         app:layout_constraintEnd_toEndOf="@+id/lactancy"
+        app:layout_constraintHorizontal_bias="0.263"
         app:layout_constraintStart_toStartOf="@+id/lactancy"
         app:layout_constraintTop_toBottomOf="@+id/lactancy" />
 
     <Button
         android:id="@+id/childhood"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="29dp"
+        android:layout_width="92dp"
+        android:layout_height="116dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/childhood"
         app:layout_constraintBottom_toTopOf="@+id/childhoodText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/lactancy"
-        app:layout_constraintTop_toTopOf="@+id/lactancy" />
+        app:layout_constraintEnd_toEndOf="@+id/childhoodText"
+        app:layout_constraintStart_toStartOf="@+id/childhoodText" />
 
     <TextView
         android:id="@+id/childhoodText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="Niñez"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="72dp"
+        android:text="Niñéz"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/lactancyText"
-        app:layout_constraintEnd_toEndOf="@+id/childhood"
-        app:layout_constraintStart_toStartOf="@+id/childhood"
-        app:layout_constraintTop_toBottomOf="@+id/childhood"
-        app:layout_constraintVertical_bias="0.396" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lactancyText"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/youth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_width="141dp"
+        android:layout_height="103dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/youth"
-        app:layout_constraintBottom_toTopOf="@+id/youthText"
         app:layout_constraintEnd_toEndOf="@+id/lactancyText"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/lactancyText"
         app:layout_constraintTop_toBottomOf="@+id/lactancyText" />
 
@@ -84,73 +74,62 @@
         android:id="@+id/youthText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
         android:text="Adolescencia"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/elderly"
         app:layout_constraintEnd_toEndOf="@+id/youth"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/youth"
         app:layout_constraintTop_toBottomOf="@+id/youth" />
 
     <Button
         android:id="@+id/adult"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="56dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="140dp"
+        android:layout_height="112dp"
         android:background="@drawable/adult"
         app:layout_constraintBottom_toTopOf="@+id/adultText"
-        app:layout_constraintEnd_toEndOf="@+id/childhoodText"
-        app:layout_constraintHorizontal_bias="0.211"
-        app:layout_constraintStart_toStartOf="@+id/childhoodText"
-        app:layout_constraintTop_toBottomOf="@+id/childhoodText" />
+        app:layout_constraintEnd_toEndOf="@+id/adultText"
+        app:layout_constraintStart_toStartOf="@+id/adultText" />
 
     <TextView
         android:id="@+id/adultText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
         android:text="Adulto jóven"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/elderly"
-        app:layout_constraintEnd_toEndOf="@+id/adult"
-        app:layout_constraintStart_toStartOf="@+id/adult"
-        app:layout_constraintTop_toBottomOf="@+id/adult" />
+        app:layout_constraintBottom_toBottomOf="@+id/youthText"
+        app:layout_constraintEnd_toEndOf="@+id/childhood"
+        app:layout_constraintStart_toStartOf="@+id/childhood"
+        app:layout_constraintTop_toTopOf="@+id/youthText"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/elderly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="159dp"
+        android:layout_height="122dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/elderly"
-        app:layout_constraintBottom_toTopOf="@+id/elderlyText"
-        app:layout_constraintEnd_toEndOf="@+id/adult"
-        app:layout_constraintHorizontal_bias="0.479"
-        app:layout_constraintStart_toStartOf="@+id/youth"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/adultText"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="@+id/youthText"
+        app:layout_constraintTop_toBottomOf="@+id/adultText" />
 
     <TextView
         android:id="@+id/elderlyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="133dp"
+        android:layout_marginTop="8dp"
         android:text="Adulto mayor"
         android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/elderly"
-        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="@+id/elderly"
         app:layout_constraintTop_toBottomOf="@+id/elderly" />
 
