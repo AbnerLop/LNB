@@ -1,0 +1,59 @@
+{
+  "nutrimento":[{
+    "nombre": "Vitaminas hidrosolubles",
+    "nutrimento_especificado": [{
+      "nombre": "Tiamina B1",
+      "fuentes": ["granos, cerdo"],
+      "cantidad_hombres": {
+        "lactancia": "0.5 mg",
+        "niños": "0.6 mg",
+        "adolescencia": "1.2 mg",
+        "adultos": "1.2 mg",
+        "vejez": "PEND"
+      },
+      "cantidad_mujeres": {
+        "lactancia": "0.5 mg",
+        "niños": "0.6 mg",
+        "adolescencia": "1.0 mg",
+        "adultos": "1.1 mg",
+        "vejez": "PEND"
+      }
+    },
+      {
+        "nombre": "Riboflavina B2",
+        "fuentes": ["Lácteos, granos, hígado, pescado, res, huevos"],
+        "cantidad_hombres": {
+          "lactancia": "0.5 mg",
+          "niños": "0.6 mg",
+          "adolescencia": "1.3 mg",
+          "adultos": "1.3 mg",
+          "vejez": "PEND"
+        },
+        "cantidad_mujeres": {
+          "lactancia": "0.5mg",
+          "niños": "0.6 mg",
+          "adolescencia": "1.0 mg",
+          "adultos": "1.1 mg",
+          "vejez": "PEND"
+        }
+      },
+      {
+        "nombre": "Niacina B3",
+        "fuentes": ["Carnes, pescados, granos"],
+        "cantidad_hombres": {
+          "lactancia": "2 mg",
+          "niños": "8 mg",
+          "adolescencia": "16 mg",
+          "adultos": "16 mg",
+          "vejez": "PEND"
+        },
+        "cantidad_mujeres": {
+          "lactancia": "2 mg",
+          "niños": "8 mg",
+          "adolescencia": "14 mg",
+          "adultos": "14 mg",
+          "vejez": "PEND"
+        }
+      }]
+  }]
+}

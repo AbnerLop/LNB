@@ -6,10 +6,19 @@
     tools:context=".ChildhoodFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment"
-        tools:text="CHILDHOOD" />
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/ninezText"
+            tools:text="CHILDHOOD"
+            android:textSize="18sp"
+            android:layout_weight="1.0"/>
+    </ScrollView>
 
 </FrameLayout>

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">LNB</string>
-    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_activity_main_menu">Nutri-dito</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -10,6 +10,651 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="lactanciaText">Los micronutimentos críticos para los lactantes son:\n
+        \t•	Vit C\n
+        \t•	Hierro\n
+        \t•	Calcio\n
+        \t•	Vit A\n
+        \t•	Folato\n
+        \t•	Zinc\n
+        \t•	Vit K\n
+        \t•	Vit D\n
+        \t• Yodo\n
+        \n
+        Las suplementaciones de los micronutrimentos para lactantes son:\n
+        \t•	Vitamina A:\n
+        \t\t\t 6-11 meses: Dosis: 100 000 IU por vía oral- preparación a base de aceite\n
+        \t\t\t 12-59 meses: 200 000 IU Cada 4, 6 meses, vía oral\n
+        \n
+        \t•	Hierro:\n
+        \t\t\t 6-23 meses:   2 ml/kg/d (>40% de anemia)\n
+        \n
+        \t•	Zinc:\n
+        \t\t\t menor a 6 meses: 10 mg/d\n
+        \t\t\t Cuando hay diarrea: (20 mg/d) por 10-14 días\n
+        \n
+        \t•	Vitamina B3:\n \t\t\ten niños de 0-0.5 años: 2 mg/d\n \t\t\t 0.5-1 año: 4 mg/d\n \t\t\t y se puede
+        encontrar en carnes, pescados, granos. La deficiencia de vitamina B3 puede producir lesiones cutáneas
+        y gastrointestinales, nerviosismo y/o desórdenes mentales.\n
+        \n
+        \t•	Ácido pantoténico:\n \t\t\t en niños de 0-6 meses: 1.7 mg/d\n \t\t\t 7-12 meses: 1.5 mg/d\n
+        \t\t\t y se puede encontrar en carnes. granos, verduras, frutas, leche. La deficiencia de ácido pantoténico
+        puede causar fatiga, perturbaciones del sueño y/o merma de coordinación.\n
+        \n
+        \t•	Vitamina B6:\n \t\t\t en niños de 0-0.5 años: 0.1 mg/d\n \t\t\t 0.5-1 año: 0.3 mg/d\n
+        \t\t\t y se puede encontrar en cereales colecitas de Bruselas, pimientos dulces, papas, carne.
+        La deficiencia de vitamina B6 puede causar irritabilidad, convulsiones, tics musculares, dermatitis y/o cálculos renales.\n
+        \n
+        \t•	Vitamina B7:\n \t\t\t en niños de 0-6 meses: 5  µg/d\n \t\t\t 7-12 meses:  6  µg/d\n
+        \t\t\t y se puede encontrar en granos,  cereales, carnes, frijoles secos, huevos cocidos y verduras. La deficiencia
+        de vitamina B7 puede producir fatiga, depresión, náuseas y/o dermatitis.\n
+        \n
+        \t•	Vitamina B9:\n \t\t\t en niños de 0-5 meses: 65  µg/d\n \t\t\t 6-12 meses:  80 µg/d\n
+        \t\t\t y se puede encontrar en cereales, verduras de hojas verdes, frijoles. La deficiencia de vitamina
+        B9 puede dar anemia, perturbaciones gastrointestinales, diarrea, retraso en el crecimiento y/o defectos congénitos.\n
+        \n
+        \t•	Vitamina B12:\n \t\t\t en niños de 0-12 meses: 0.4-0.5 µg/d\n
+        \t\t\t y se puede encontrar en pescados, mariscos, carnes, leche, quesos y cereales. La deficiencia de
+        vitamina B12 puede dar anemia, cansancio, problemas de concentración, hormigueo, hinchazón en la lengua.\n
+        \n
+        \t•	Vitamina K:\n \t\t\t en niños de 0-6 meses: 2  µg/d\n \t\t\t 7-12 meses:  2.5µg/d\n
+        \t\t\t y se puede encontrar en verduras de hoja verde y granos. La deficiencia de vitamina K
+        puede provocar moretones y problemas de sangrado debido a que la coagulación de la sangre es más lenta.\n
+        \n
+        \t•	Calcio:\n \t\t\t en niños de 0-6 meses: 200 mg\n \t\t\t 7-12 meses: 260 mg\n
+        \t\t\t y se puede encontrar en lácteos, alimentos fortificados, verduras: espinaca cocida, brócoli
+        y legumbres: frijoles secos. La deficiencia de calcio frena el desarrollo normal en los niños, y en
+        los adultos provoca pérdida de masa ósea.\n
+        \n
+        \t•	Fósforo:\n \t\t\t en niños de 0-6 meses: 100 mg\n \t\t\t 7-12 meses: 275 mg\n
+        \t\t\t y se puede encontrar en lácteos, carnes, semillas, nueces, verduras: papa, maíz, chícharo,
+        brócoli. La deficiencia de fósforo se caracteriza por anemia y pérdida de peso.\n
+        \n
+        \t•	Magnesio:\n \t\t\t en niños de 0-1 año: 11 mg/d\n \t\t\t y se puede encontrar en  nueces secas,
+        cacahuates, patatas, verduras verdes, legumbres, granos: germen de trigo, leche y productos lácteos,
+        carnes. La deficiencia de magnesio se puede presentar con fatiga inexplicable, ritmos cardíacos anormales,
+        contracciones oculares y espasmos musculares.\n
+        \n
+        \t•	Yodo:\n \t\t\t en niños de 0-6 meses:  110 µg/d\n \t\t\t 7-12 meses: 130 µg/d\n
+        \t\t\t y se puede encontrar en sal yodada, leche y productos lácteos, mariscos y algas. La deficiencia
+        de yodo se puede presentar como bocio, hipotiroidismo, abortos espontáneos y anomalías congénitas.\n
+        \n
+        \t•	Hierro:\n \t\t\t en niños de 0.5-1 años: 11  mg/d\n \t\t\t y se puede encontrar en hígado ,cerdo,
+        res, frijoles de soya, cereales fortificados, pan, ciruelas pasas, albaricoques, uvas pasa y espinacas.
+        La deficiencia de hierro se puede presentar com anemia, disminución de termogénesis, aumento de probabilidad
+        de parto prematuro y reducción del tono vagal.\n
+        \n
+        \t•	Zinc:\n \t\t\t en niños de 0-3 años: 3 mg/d\n \t\t\t y se puede encontrar en leche, productos lácteos,
+        carnes: hígado, res, cangrejo, cerdo, pollo, legumbres: frijol y chícharos, granos (fortificados),
+        nueces y semillas. La deficiencia de zinc se puede presentar como diarrea, anorexia, retraso en el
+        crecimiento, fotofobia, opacidades corneales, hipogeusia, hiposmia, hipogonadismo, amenorrea, anemia,
+        deterioro en la cicatrización de heridas, ronquera, problemas neuropsiquiátricos, morbilidad perinatal,
+        disminución de las células T, neutrófilos, células natural killer (NK).\n
+        \n
+        \t•	Fluor:\n \t\t\t en niños de 7-12 meses: 0.5  mg/d\n \t\t\t y se puede encontrar en jugos, tés,
+        uvas pasas, vino, agua embotellada. La deficiencia de fluor se manifiesta como caries.\n
+        \n
+        \t•	Cromo:\n \t\t\t en niños de 0-6 meses: 0.2  µg/d\n \t\t\t 7-12 meses:  5.5µg/d\n
+        \t\t\t y se puede encontrar en granos enteros, germen de trigo, hígado,carne, cerveza, vino y ostiones.
+        La deficiencia de cromo puede causar resistencia a la insulina, problemas cardiacos o síndrome metabólico.\n
+        \n
+        \t•	Molibdeno:\n \t\t\t en niños de 0-6 meses: 2  µg/d\n \t\t\t 7-12 meses:  3 µg/d\n
+        \t\t\t y se puede encontrar en frijoles secos, granos, verdura de hoja verde oscura, hígado, leche y lácteos.
+        La deficiencia de molibdeno  se presenta como incremento de la frecuencia cardíaca y respiratoria, ceguera
+        nocturna y daños neurológicos que pueden llegar a coma.
+
+    </string>
+    <string name="ninezText">Los micronutimentos críticos para preescolar (2-5 años) son:\n
+\t•	Hierro\n
+\t•	Calcio\n
+\t•	Vit D\n
+\t•	Zinc\n
+\t•	Vit A\n
+\t•	Yodo\n
+        \n
+        Los micronutimentos críticos para escolar (5-11 años) son:\n
+\t•	hierro\n
+\t•	calcio\n
+\t•	zinc\n
+\t•	vit D\n
+        \n
+        Las suplementaciones de los micronutrimentos para preescolares son: \n
+\t•	Hierro:\n
+\t\t\t mg de hierro elemental= 75 mg de fumarato ferroso, 125 mg de sulfato ferroso (es el mejor)
+        , 210 mg de gluconato ferroso en jarabe o gotas una por semana intermitente (3 meses si, tres meses no)\n
+        \n
+\t•	Folato:\n
+\t\t\t 24-59 meses: 300 µg una vez a la semana(0.3 mg)\n
+        \n
+        Las suplementaciones de los micronutrimentos para escolares son:\n
+\t•	Hierro:\n
+\t\t\t 45 mg de hierro elemental= 135 mg de fumarato ferroso, 225 mg de sulfato ferroso
+        (es el mejor), 375 mg de gluconato ferroso en tabletas o cápsulas una por semana
+        intermitente (3 meses si, tres meses no)\n
+        \n
+\t•	Folato:\n
+  \t\t\t 400 µg (0.4 mg)\n
+        \n
+        \t•	Vitamina B1:\n \t\t\t en niños de 1-3 años: 0.5 mg/d\n \t\t\t 4-8 años: 0.6 mg/d\n
+        \t\t\t 9-13 años: 0.9 mg/d\n y se puede encontrar en granos y cerdo. La deficiencia de
+        vitamina B1 puede dar como resultado debilidad muscular, insuficiencia cardiaca y/o hinchazón de las extremidades.\n
+        \n
+        \t•	Vitamina B2:\n \t\t\t en niños de 1-3 años: 0.5 mg/d\n \t\t\t 4-8 años: 0.6 mg/d\n
+        \t\t\t 9-13 años: 0.9 mg/d\n y se puede encontrar en lácteos, granos, hígado, pescado,
+        res, huevos. La deficiencia de vitamina B2 puede causar enrojecimiento labial, grietas
+        en las comisuras de la boca y/o lesiones oculares.\n
+        \n
+        \t•	Vitamina B3:\n \t\t\t en niños de 1-3 años: 6 mg/d\n \t\t\t 4-8 años: 8 mg /d\n
+        \t\t\t 9-13 años: 12  mg/d\n y se puede encontrar en carnes, pescados, granos.
+        La deficiencia de vitamina B3 puede producir lesiones cutáneas y gastrointestinales, nerviosismo y/o desórdenes mentales.\n
+        \n
+        \t•	Ácido pantoténico:\n \t\t\t en niños de 1-3 años: 2 mg/d\n \t\t\t 4-8 años: 3 mg/d\n
+        y se puede encontrar en carnes. granos, verduras, frutas, leche. La deficiencia de ácido
+        pantoténico puede causar fatiga, perturbaciones del sueño y/o merma de coordinación.\n
+        \n
+        \t•	Vitamina B6:\n \t\t\t en niños de 1-3 años: 0.5 mg/d\n \t\t\t 4-8 años: 0.6 mg/d\n
+        \t\t\t 9-13 años: 1  mg\n \t\t\t y se puede encontrar en cereales colecitas de Bruselas,
+        pimientos dulces, papas, carne. La deficiencia de vitamina B6 puede causar irritabilidad,
+        convulsiones, tics musculares, dermatitis y/o cálculos renales.\n
+        \n
+        \t•	Vitamina B7:\n \t\t\t en niños de 1-3 años: 8  µg/d\n \t\t\t 4-8 años:  12 µg/d\n
+        \t\t\t 9-13 años: 20 µg/d\n \t\t\t 14-18 años: 25 µg/d\n \t\t\t y se puede encontrar en granos,
+        cereales, carnes, frijoles secos, huevos cocidos y verduras. La deficiencia de vitamina B7
+        puede producir fatiga, depresión, náuseas y/o dermatitis.\n
+        \n
+        \t•	Vitamina B9:\n \t\t\t en niños de 1-3 años: 150  µg/d\n \t\t\t 4-8 años:  200 µg/d\n
+        \t\t\t 9-13 años: 300 µg/d\n \t\t\t y se puede encontrar en cereales, verduras de hojas
+        verdes, frijoles. La deficiencia de vitamina B9 puede dar anemia, perturbaciones
+        gastrointestinales, diarrea, retraso en el crecimiento y/o defectos congénitos.\n
+        \n
+        \t•	Vitamina B12:\n en niños de 1-3 años: 0.9  µg/d\n \t\t\t 4-8 años:  1.2 µg/d\n
+        \t\t\t 9-13 años: 1.8 µg/d\n \t\t\t 14-18 años: 2.4 µg/d\n \t\t\t y se puede encontrar en
+        pescados, mariscos, carnes, leche, quesos y cereales. La deficiencia de vitamina B12 puede
+        dar anemia, cansancio, problemas de concentración, hormigueo, hinchazón en la lengua.\n
+        \n
+        \t•	Vitamina C:\n \t\t\t en niños de 1-3 años: 15  mg\n \t\t\t 4-8 años:  25 mg\n
+        \t\t\t 9-13 años:  45  mg\n \t\t\t y se puede encontrar en frutas y verduras. La deficiencia
+        de vitamina C puede causar cicatrización lenta, inflamación y sangrado de la encías.\n
+        \n
+        \t•	Vitamina A:\n \t\t\t en niños de 1-3 años: 300  µg/d\n \t\t\t 4-8 años: 400 µg/d\n
+        \t\t\t 9-13 años: 600 µg/d\n \t\t\t y se puede encontrar en carnes, productos lácteos,
+        leche, verduras y frutas. La deficiencia de vitamina A se presenta con dificultad para
+        adaptarse a la oscuridad o la ceguera nocturna.\n
+        \n
+        \t•	Vitamina D:\n \t\t\t la dosis recomendada es de 600 IU en niños y se puede encontrar en
+        pescados, mariscos, leche. La deficiencia de vitamina D se presenta con debilidad y dolor en los huesos.\n
+        \n
+        \t•	Vitamina E:\n \t\t\t en niños de 1-3 años: 6 mg/d\n \t\t\t 4-8 años: 7 mg/d\n
+        \t\t\t 9-13 años: 11 mg/d\n \t\t\t y se puede encontrar en nueces, semillas, aceites vegetales,
+        pescados y mariscos, granos y verduras. La deficiencia de vitamina E provoca principalmente
+        síntomas neurológicos, inclusive equilibrio y coordinación deficiente, daños en los nervios
+        sensoriales, debilidad muscular y daños en la retina del ojo.\n
+        \n
+        \t•	Vitamina K:\n \t\t\t en niños de 1-3 años: 30  µg/d\n \t\t\t 4-8 años:  55 µg/d\n
+        \t\t\t 9-13 años: 60 µg/d\n \t\t\t 14-18 años: 75 µg/d\n \t\t\t y se puede encontrar en
+        verduras de hoja verde y granos. La deficiencia de vitamina K puede provocar moretones y
+        problemas de sangrado debido a que la coagulación de la sangre es más lenta.\n
+        \n
+        \t•	Calcio:\n \t\t\t en niños de 1-5 años: 700 mg\n \t\t\t 4-8 años : 1000 mg\n
+        \t\t\t 9-18 años: 1300 mg\n \t\t\t y se puede encontrar en lácteos, alimentos fortificados,
+        verduras: espinaca cocida, brócoli y legumbres: frijoles secos. La deficiencia de calcio
+        frena el desarrollo normal en los niños, y en los adultos provoca pérdida de masa ósea.\n
+        \n
+        \t•	Fósforo:\n \t\t\t en niños de 1-3 años: 460 mg\n \t\t\t 4-8 años: 500 mg\n
+        \t\t\t 9-18 años: 1250mg\n \t\t\t y se puede encontrar en lácteos, carnes, semillas,
+        nueces, verduras: papa, maíz, chícharo, brócoli. La deficiencia de fósforo se
+        caracteriza por anemia y pérdida de peso.\n
+        \n
+        \t•	Magnesio:\n \t\t\t en niños de 1-3 años: 7 mg/d\n \t\t\t 4-8 años: 10 mg/d\n
+        \t\t\t 9-13 años: 8 mg/d\n \t\t\t y se puede encontrar en  nueces secas, cacahuates,
+        patatas, verduras verdes, legumbres, granos: germen de trigo, leche y productos lácteos,
+        carnes. La deficiencia de magnesio se puede presentar con fatiga inexplicable, ritmos
+        cardíacos anormales, contracciones oculares y espasmos musculares.\n
+        \n
+        \t•	Yodo:\n \t\t\t en niños de 1-8 años: 90  µg/d\n \t\t\t 9-13 años: 120 µg/d\n
+        \t\t\t y se puede encontrar en sal yodada, leche y productos lácteos, mariscos y algas.
+        La deficiencia de yodo se puede presentar como bocio, hipotiroidismo, abortos espontáneos y anomalías congénitas.\n
+        \n
+        \t•	Hierro:\n \t\t\t en niños de 1-3 años: 7 mg/d\n \t\t\t 4-8 años: 10 mg/d\n
+        \t\t\t 9-13 años: 8 mg/d\n \t\t\t y se puede encontrar en hígado ,cerdo, res,
+        frijoles de soya, cereales fortificados, pan, ciruelas pasas, albaricoques,
+        uvas pasa y espinacas. La deficiencia de hierro se puede presentar com anemia,
+        disminución de termogénesis, aumento de probabilidad de parto prematuro y reducción del tono vagal.\n
+        \n
+        \t•	Cobre:\n \t\t\t en niños de 1-3 años: 340  µg/d\n \t\t\t 4-8 años: 440 µg/d\n
+        \t\t\t 9-13 años: 700 µg/d\n \t\t\t 14-18 años: 890 µg/d\n \t\t\t y se puede encontrar en
+        papas, granos, frijoles secos, nueces, semillas y mariscos. La deficiencia de cobre se
+        puede presentar como anemia, neutropenia, debilidades esqueléticas y formación defectuosa de elestina.\n
+        \n
+        \t•	Zinc:\n \t\t\t en niños de 4-8 años: 4 mg/d\n \t\t\t 9-13 años: 8 mg/d\n \t\t\t y se puede
+        encontrar en leche, productos lácteos, carnes: hígado, res, cangrejo, cerdo, pollo, legumbres:
+        frijol y chícharos, granos (fortificados), nueces y semillas. La deficiencia de zinc se puede
+        presentar como diarrea, anorexia, retraso en el crecimiento, fotofobia, opacidades corneales,
+        hipogeusia, hiposmia, hipogonadismo, amenorrea, anemia, deterioro en la cicatrización de heridas,
+        ronquera, problemas neuropsiquiátricos, morbilidad perinatal, disminución de las células T,
+        neutrófilos, células natural killer (NK).\n
+        \n
+        \t•	Fluor:\n \t\t\t en niños de 1-3 años: 0.6 mg/d\n \t\t\t 4-8 años: 1.1 mg/d\n
+        \t\t\t 9-13 años: 2 mg/d\n \t\t\t y se puede encontrar en jugos, tés, uvas pasas, vino,
+        agua embotellada. La deficiencia de fluor se manifiesta como caries.\n
+        \n
+        \t•	Selenio:\n \t\t\t en niños de 1-3 años: 20  µg/d\n \t\t\t 4-8 años:  30µg/d\n
+        \t\t\t 9-13 años: 40 µg/d\n \t\t\t y se puede encontrar en carnes, mariscos y huevos.
+        La deficiencia de selenio se puede presentar como enfermedad de Keshan, infertilidad
+        en los hombres, aumento de probabilidad de cáncer de colon, recto, próstata, vejiga,
+        piel, esófago, estómago, problemas tiroideos y enfermedad de Kashin-Beck.\n
+        \n
+        \t•	Cromo:\n \t\t\t en niños de 1-3 años: 11  µg/d\n \t\t\t 4-8 años: 15µg/d\n
+        \t\t\t y se puede encontrar en granos enteros, germen de trigo, hígado,carne, cerveza,
+        vino y ostiones. La deficiencia de cromo puede causar resistencia a la insulina, problemas
+        cardiacos o síndrome metabólico.\n
+        \n
+        \t•	Molibdeno:\n \t\t\t en niños de 1-3 años: 17  µg/d\n \t\t\t 4-8 años:  22 µg/d\n
+        \t\t\t 9-13 años: 34 µg/d\n \t\t\t 14-18 años: 43 µg/d\n \t\t\t y se puede encontrar
+        en frijoles secos, granos, verdura de hoja verde oscura, hígado, leche y lácteos.
+        La deficiencia de molibdeno  se presenta como incremento de la frecuencia cardíaca y
+        respiratoria, ceguera nocturna y daños neurológicos que pueden llegar a coma.\n
+
+
+    </string>
+    <string name="youthText">Los micronutimentos críticos para adolescentes son:\n
+\t•	calcio\n
+\t•	zinc\n
+\t•	vit d\n
+\t•	hierro\n
+\t•	folato\n
+        \n
+        Las suplementaciones de los micronutrimentos para adolescentes solo es para mujeres durante su menstruación de:\n
+
+\t•	Hierro:\n \t\t\t 60 mg\n
+\t•	Folato:\n \t\t\t 2800 µg (2.8 mg), 1 vez a la semana  intermitente (3 meses si, tres meses no)
+- Si tiene anemia: 120 mg de hierro diario.\n
+        \n
+        \t•	Vitamina B1:\n \t\t\t la dosis recomendada es de 1.2 mg en hombres, 1.1 mg en
+        mujeres\n \t\t\t y se puede encontrar en granos y cerdo.
+        La deficiencia de vitamina B1 puede dar como resultado debilidad muscular,
+        insuficiencia cardiaca y/o hinchazón de las extremidades.\n
+        \n
+        \t•	Vitamina B2:\n \t\t\t la dosis recomendada es de 1.3 mg en hombres, 1.1 mg en
+        mujeres\n \t\t\t y se puede encontrar en lácteos, granos, hígado, pescado,
+        res, huevos. La deficiencia de vitamina B2 puede causar enrojecimiento labial,
+        grietas en las comisuras de la boca y/o lesiones oculares.\n
+        \n
+        \t•	Vitamina B3:\n \t\t\t la dosis recomendada es de 16 mg en hombres, 14 mg en mujeres\n
+        \t\t\t y se puede encontrar en carnes, pescados, granos. La deficiencia de vitamina B3
+        puede producir lesiones cutáneas y gastrointestinales, nerviosismo y/o desórdenes mentales.\n
+        \n
+        \t•	Ácido pantoténico:\n \t\t\t la dosis recomendada es de 5 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en carnes. granos, verduras, frutas, leche.
+        La deficiencia de ácido pantoténico puede causar fatiga, perturbaciones del sueño y/o merma de coordinación.\n
+        \n
+        \t•	Vitamina B6:\n \t\t\t la dosis recomendada es de 1.3 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en cereales colecitas de Bruselas, pimientos dulces,
+        papas, carne. La deficiencia de vitamina B6 puede causar irritabilidad, convulsiones,
+        tics musculares, dermatitis y/o cálculos renales.\n
+        \n
+        \t•	Vitamina B7:\n \t\t\t la dosis recomendada es de 30 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en granos,  cereales, carnes, frijoles secos, huevos cocidos
+        y verduras. La deficiencia de vitamina B7 puede producir fatiga, depresión, náuseas y/o dermatitis.\n
+        \n
+        \t•	Vitamina B9:\n \t\t\t la dosis recomendada es de 400 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en cereales, verduras de hojas verdes, frijoles.
+        La deficiencia de vitamina B9 puede dar anemia, perturbaciones gastrointestinales, diarrea,
+        retraso en el crecimiento y/o defectos congénitos.\n
+        \n
+        \t•	Vitamina B12:\n \t\t\t la dosis recomendada es de 2.4µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en pescados, mariscos, carnes, leche, quesos y cereales.
+        La deficiencia de vitamina B12 puede dar anemia, cansancio, problemas de concentración,
+        hormigueo, hinchazón en la lengua.\n
+        \n
+        \t•	Vitamina C:\n \t\t\t la dosis recomendada es de 90 mg en hombres, 75 mg en mujeres\n
+        \t\t\t y se puede encontrar en frutas y verduras. La deficiencia de vitamina C puede causar
+        cicatrización lenta, inflamación y sangrado de la encías.\n
+        \n
+        \t•	Vitamina A:\n \t\t\t la dosis recomendada es de 900 µg/d en hombres, 700 µg/d en mujeres\n
+        \t\t\t y se puede encontrar en carnes, productos lácteos, leche, verduras y frutas.
+        La deficiencia de vitamina A se presenta con dificultad para adaptarse a la oscuridad o la ceguera nocturna.\n
+        \n
+        \t•	Vitamina D:\n \t\t\t la dosis recomendada es de 600 IU en hombres, mujeres\n
+        \t\t\t y se puede encontrar en pescados, mariscos, leche. La deficiencia de vitamina D
+        se presenta con debilidad y dolor en los huesos.\n
+        \n
+        \t•	Vitamina E:\n \t\t\t la dosis recomendada es de 15 mg/d en hombres y mujeres\n
+        \t\t\t y se puede encontrar en nueces, semillas, aceites vegetales, pescados y mariscos,
+        granos y verduras. La deficiencia de vitamina E provoca principalmente síntomas neurológicos,
+        inclusive equilibrio y coordinación deficiente, daños en los nervios sensoriales, debilidad
+        muscular y daños en la retina del ojo.\n
+        \n
+        \t•	Vitamina K:\n \t\t\t la dosis recomendada es de 120 µg/d en hombres, 90 µg/d en mujeres\n
+        \t\t\t y se puede encontrar en verduras de hoja verde y granos. La deficiencia de vitamina K
+        puede provocar moretones y problemas de sangrado debido a que la coagulación de la sangre es más lenta.\n
+        \n
+        \t•	Calcio:\n \t\t\t la dosis recomendada es de 1000 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en lácteos, alimentos fortificados, verduras: espinaca cocida,
+        brócoli y legumbres: frijoles secos. La deficiencia de calcio frena el desarrollo normal en los
+        niños, y en los adultos provoca pérdida de masa ósea.\n
+        \n
+        \t•	Fósforo:\n \t\t\t la dosis recomendada es de 700 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en lácteos, carnes, semillas, nueces, verduras: papa, maíz,
+        chícharo, brócoli. La deficiencia de fósforo se caracteriza por anemia y pérdida de peso.\n
+        \n
+        \t•	Magnesio:\n \t\t\t la dosis recomendada es de 400 mg en hombres, 310 mg en mujeres\n
+        \t\t\t y se puede encontrar en  nueces secas, cacahuates, patatas, verduras verdes,
+        legumbres, granos: germen de trigo, leche y productos lácteos, carnes. La deficiencia de
+        magnesio se puede presentar con fatiga inexplicable, ritmos cardíacos anormales, contracciones
+        oculares y espasmos musculares.\n
+        \n
+        \t•	Yodo:\n \t\t\t la dosis recomendada es de 150 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en sal yodada, leche y productos lácteos, mariscos y algas.
+        La deficiencia de yodo se puede presentar como bocio, hipotiroidismo, abortos espontáneos
+        y anomalías congénitas.\n
+        \n
+        \t•	Hierro:\n \t\t\t la dosis recomendada es de 8 mg en hombres y 18 mg en mujeres\n
+        \t\t\t y se puede encontrar en hígado ,cerdo, res, frijoles de soya, cereales fortificados,
+        pan, ciruelas pasas, albaricoques, uvas pasa y espinacas. La deficiencia de hierro se
+        puede presentar com anemia, disminución de termogénesis, aumento de probabilidad de parto
+        prematuro y reducción del tono vagal.\n
+        \n
+        \t•	Cobre:\n \t\t\t la dosis recomendada es de 900 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en papas, granos, frijoles secos, nueces, semillas y mariscos.
+        La deficiencia de cobre se puede presentar como anemia, neutropenia, debilidades
+        esqueléticas y formación defectuosa de elestina.\n
+        \n
+        \t•	Zinc:\n \t\t\t la dosis recomendada es de 11 mg en hombres y 8 mg en mujeres\n
+        \t\t\t y se puede encontrar en leche, productos lácteos, carnes: hígado, res, cangrejo,
+        cerdo, pollo, legumbres: frijol y chícharos, granos (fortificados), nueces y semillas.
+        La deficiencia de zinc se puede presentar como diarrea, anorexia, retraso en el
+        crecimiento, fotofobia, opacidades corneales, hipogeusia, hiposmia, hipogonadismo,
+        amenorrea, anemia, deterioro en la cicatrización de heridas, ronquera, problemas
+        neuropsiquiátricos, morbilidad perinatal, disminución de las células T, neutrófilos,
+        células natural killer (NK).\n
+        \n
+        \t•	Fluor:\n \t\t\t la dosis recomendada es de 4 mg en hombres, 3 mg en mujeres\n
+        \t\t\t y se puede encontrar en jugos, tés, uvas pasas, vino, agua embotellada.
+        La deficiencia de fluor se manifiesta como caries.\n
+        \n
+        \t•	Selenio:\n \t\t\t la dosis recomendada es de 55 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en carnes, mariscos y huevos. La deficiencia de selenio se
+        puede presentar como enfermedad de Keshan, infertilidad en los hombres, aumento de
+        probabilidad de cáncer de colon, recto, próstata, vejiga, piel, esófago, estómago,
+        problemas tiroideos y enfermedad de Kashin-Beck.\n
+        \n
+        \t•	Cromo:\n \t\t\t la dosis recomendada es de 35 µg en hombres, 25 µg en mujeres\n
+        \t\t\t y se puede encontrar en granos enteros, germen de trigo, hígado,carne, cerveza,
+        vino y ostiones. La deficiencia de cromo puede causar resistencia a la insulina,
+        problemas cardiacos o síndrome metabólico.\n
+        \n
+        \t•	Molibdeno:\n \t\t\t la dosis recomendada es de 45 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en frijoles secos, granos, verdura de hoja verde oscura,
+        hígado, leche y lácteos. La deficiencia de molibdeno  se presenta como incremento de
+        la frecuencia cardíaca y respiratoria, ceguera nocturna y daños neurológicos que pueden llegar a coma.\n
+
+</string>
+    <string name="adultText">Los micronutimentos críticos para adultos son:\n
+\t•	calcio\n
+\t•	vit D\n
+\t•	folato\n
+\t•	vitamina E\n
+\t•	Vitamina A\n
+\t•	hierro\n
+\t•	Magnesio\n
+\t•	Potasio\n
+        \n
+        \t No es necesario suplementación cuando se lleva una dieta correcta.\n
+\t•	Hierro:\n
+\t\t\t 50-200 mg hierro elemental si hay anemia.\n
+        \n
+        \t•	Vitamina B1:\n \t\t\t la dosis recomendada es de 1.2 mg en hombres, 1.1 mg en
+        mujeres\n \t\t\t y se puede encontrar en granos y cerdo.
+        La deficiencia de vitamina B1 puede dar como resultado debilidad muscular,
+        insuficiencia cardiaca y/o hinchazón de las extremidades.\n
+        \n
+        \t•	Vitamina B2:\n \t\t\t la dosis recomendada es de 1.3 mg en hombres, 1.1 mg en
+        mujeres\n \t\t\t y se puede encontrar en lácteos, granos, hígado, pescado,
+        res, huevos. La deficiencia de vitamina B2 puede causar enrojecimiento labial,
+        grietas en las comisuras de la boca y/o lesiones oculares.\n
+        \n
+        \t•	Vitamina B3:\n \t\t\t la dosis recomendada es de 16 mg en hombres, 14 mg en mujeres\n
+        \t\t\t y se puede encontrar en carnes, pescados, granos. La deficiencia de vitamina B3
+        puede producir lesiones cutáneas y gastrointestinales, nerviosismo y/o desórdenes mentales.\n
+        \n
+        \t•	Ácido pantoténico:\n \t\t\t la dosis recomendada es de 5 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en carnes. granos, verduras, frutas, leche.
+        La deficiencia de ácido pantoténico puede causar fatiga, perturbaciones del sueño y/o merma de coordinación.\n
+        \n
+        \t•	Vitamina B6:\n \t\t\t la dosis recomendada es de 1.3 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en cereales colecitas de Bruselas, pimientos dulces,
+        papas, carne. La deficiencia de vitamina B6 puede causar irritabilidad, convulsiones,
+        tics musculares, dermatitis y/o cálculos renales.\n
+        \n
+        \t•	Vitamina B7:\n \t\t\t la dosis recomendada es de 30 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en granos,  cereales, carnes, frijoles secos, huevos cocidos
+        y verduras. La deficiencia de vitamina B7 puede producir fatiga, depresión, náuseas y/o dermatitis.\n
+        \n
+        \t•	Vitamina B9:\n \t\t\t la dosis recomendada es de 400 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en cereales, verduras de hojas verdes, frijoles.
+        La deficiencia de vitamina B9 puede dar anemia, perturbaciones gastrointestinales, diarrea,
+        retraso en el crecimiento y/o defectos congénitos.\n
+        \n
+        \t•	Vitamina B12:\n \t\t\t la dosis recomendada es de 2.4µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en pescados, mariscos, carnes, leche, quesos y cereales.
+        La deficiencia de vitamina B12 puede dar anemia, cansancio, problemas de concentración,
+        hormigueo, hinchazón en la lengua.\n
+        \n
+        \t•	Vitamina C:\n \t\t\t la dosis recomendada es de 90 mg en hombres, 75 mg en mujeres\n
+        \t\t\t y se puede encontrar en frutas y verduras. La deficiencia de vitamina C puede causar
+        cicatrización lenta, inflamación y sangrado de la encías.\n
+        \n
+        \t•	Vitamina A:\n \t\t\t la dosis recomendada es de 900 µg/d en hombres, 700 µg/d en mujeres\n
+        \t\t\t y se puede encontrar en carnes, productos lácteos, leche, verduras y frutas.
+        La deficiencia de vitamina A se presenta con dificultad para adaptarse a la oscuridad o la ceguera nocturna.\n
+        \n
+        \t•	Vitamina D:\n \t\t\t la dosis recomendada es de 600 IU en hombres, mujeres\n
+        \t\t\t y se puede encontrar en pescados, mariscos, leche. La deficiencia de vitamina D
+        se presenta con debilidad y dolor en los huesos.\n
+        \n
+        \t•	Vitamina E:\n \t\t\t la dosis recomendada es de 15 mg/d en hombres y mujeres\n
+        \t\t\t y se puede encontrar en nueces, semillas, aceites vegetales, pescados y mariscos,
+        granos y verduras. La deficiencia de vitamina E provoca principalmente síntomas neurológicos,
+        inclusive equilibrio y coordinación deficiente, daños en los nervios sensoriales, debilidad
+        muscular y daños en la retina del ojo.\n
+        \n
+        \t•	Vitamina K:\n \t\t\t la dosis recomendada es de 120 µg/d en hombres, 90 µg/d en mujeres\n
+        \t\t\t y se puede encontrar en verduras de hoja verde y granos. La deficiencia de vitamina K
+        puede provocar moretones y problemas de sangrado debido a que la coagulación de la sangre es más lenta.\n
+        \n
+        \t•	Calcio:\n \t\t\t la dosis recomendada es de 1000 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en lácteos, alimentos fortificados, verduras: espinaca cocida,
+        brócoli y legumbres: frijoles secos. La deficiencia de calcio frena el desarrollo normal en los
+        niños, y en los adultos provoca pérdida de masa ósea.\n
+        \n
+        \t•	Fósforo:\n \t\t\t la dosis recomendada es de 700 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en lácteos, carnes, semillas, nueces, verduras: papa, maíz,
+        chícharo, brócoli. La deficiencia de fósforo se caracteriza por anemia y pérdida de peso.\n
+        \n
+        \t•	Magnesio:\n \t\t\t la dosis recomendada es de 400 mg en hombres, 310 mg en mujeres\n
+        \t\t\t y se puede encontrar en  nueces secas, cacahuates, patatas, verduras verdes,
+        legumbres, granos: germen de trigo, leche y productos lácteos, carnes. La deficiencia de
+        magnesio se puede presentar con fatiga inexplicable, ritmos cardíacos anormales, contracciones
+        oculares y espasmos musculares.\n
+        \n
+        \t•	Yodo:\n \t\t\t la dosis recomendada es de 150 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en sal yodada, leche y productos lácteos, mariscos y algas.
+        La deficiencia de yodo se puede presentar como bocio, hipotiroidismo, abortos espontáneos
+        y anomalías congénitas.\n
+        \n
+        \t•	Hierro:\n \t\t\t la dosis recomendada es de 8 mg en hombres y 18 mg en mujeres\n
+        \t\t\t y se puede encontrar en hígado ,cerdo, res, frijoles de soya, cereales fortificados,
+        pan, ciruelas pasas, albaricoques, uvas pasa y espinacas. La deficiencia de hierro se
+        puede presentar com anemia, disminución de termogénesis, aumento de probabilidad de parto
+        prematuro y reducción del tono vagal.\n
+        \n
+        \t•	Cobre:\n \t\t\t la dosis recomendada es de 900 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en papas, granos, frijoles secos, nueces, semillas y mariscos.
+        La deficiencia de cobre se puede presentar como anemia, neutropenia, debilidades
+        esqueléticas y formación defectuosa de elestina.\n
+        \n
+        \t•	Zinc:\n \t\t\t la dosis recomendada es de 11 mg en hombres y 8 mg en mujeres\n
+        \t\t\t y se puede encontrar en leche, productos lácteos, carnes: hígado, res, cangrejo,
+        cerdo, pollo, legumbres: frijol y chícharos, granos (fortificados), nueces y semillas.
+        La deficiencia de zinc se puede presentar como diarrea, anorexia, retraso en el
+        crecimiento, fotofobia, opacidades corneales, hipogeusia, hiposmia, hipogonadismo,
+        amenorrea, anemia, deterioro en la cicatrización de heridas, ronquera, problemas
+        neuropsiquiátricos, morbilidad perinatal, disminución de las células T, neutrófilos,
+        células natural killer (NK).\n
+        \n
+        \t•	Fluor:\n \t\t\t la dosis recomendada es de 4 mg en hombres, 3 mg en mujeres\n
+        \t\t\t y se puede encontrar en jugos, tés, uvas pasas, vino, agua embotellada.
+        La deficiencia de fluor se manifiesta como caries.\n
+        \n
+        \t•	Selenio:\n \t\t\t la dosis recomendada es de 55 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en carnes, mariscos y huevos. La deficiencia de selenio se
+        puede presentar como enfermedad de Keshan, infertilidad en los hombres, aumento de
+        probabilidad de cáncer de colon, recto, próstata, vejiga, piel, esófago, estómago,
+        problemas tiroideos y enfermedad de Kashin-Beck.\n
+        \n
+        \t•	Cromo:\n \t\t\t la dosis recomendada es de 35 µg en hombres, 25 µg en mujeres\n
+        \t\t\t y se puede encontrar en granos enteros, germen de trigo, hígado,carne, cerveza,
+        vino y ostiones. La deficiencia de cromo puede causar resistencia a la insulina,
+        problemas cardiacos o síndrome metabólico.\n
+        \n
+        \t•	Molibdeno:\n \t\t\t la dosis recomendada es de 45 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en frijoles secos, granos, verdura de hoja verde oscura,
+        hígado, leche y lácteos. La deficiencia de molibdeno  se presenta como incremento de
+        la frecuencia cardíaca y respiratoria, ceguera nocturna y daños neurológicos que pueden llegar a coma.\n
+
+</string>
+    <string name="elderlyText">Los micronutimentos críticos para adultos mayores son:\n
+\t•	ácido fólico\n
+\t•	vit b12\n
+\t•	vit b6\n
+\t•	vit d\n
+\t•	calcio\n
+\t•	vit e\n
+\t•	zinc\n
+\t•	vit A\n
+        \n
+        No es necesario suplementación cuando se lleva una dieta correcta.\n
+        \n
+        \t•	Vitamina B1:\n \t\t\t la dosis recomendada es de 1.2 mg en hombres, 1.1 mg en
+        mujeres\n \t\t\t y se puede encontrar en granos y cerdo.
+        La deficiencia de vitamina B1 puede dar como resultado debilidad muscular,
+        insuficiencia cardiaca y/o hinchazón de las extremidades.\n
+        \n
+        \t•	Vitamina B2:\n \t\t\t la dosis recomendada es de 1.3 mg en hombres, 1.1 mg en
+        mujeres\n \t\t\t y se puede encontrar en lácteos, granos, hígado, pescado,
+        res, huevos. La deficiencia de vitamina B2 puede causar enrojecimiento labial,
+        grietas en las comisuras de la boca y/o lesiones oculares.\n
+        \n
+        \t•	Vitamina B3:\n \t\t\t la dosis recomendada es de 16 mg en hombres, 14 mg en mujeres\n
+        \t\t\t y se puede encontrar en carnes, pescados, granos. La deficiencia de vitamina B3
+        puede producir lesiones cutáneas y gastrointestinales, nerviosismo y/o desórdenes mentales.\n
+        \n
+        \t•	Ácido pantoténico:\n \t\t\t la dosis recomendada es de 5 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en carnes. granos, verduras, frutas, leche.
+        La deficiencia de ácido pantoténico puede causar fatiga, perturbaciones del sueño y/o merma de coordinación.\n
+        \n
+        \t•	Vitamina B6:\n \t\t\t la dosis recomendada es de 1.3 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en cereales colecitas de Bruselas, pimientos dulces,
+        papas, carne. La deficiencia de vitamina B6 puede causar irritabilidad, convulsiones,
+        tics musculares, dermatitis y/o cálculos renales.\n
+        \n
+        \t•	Vitamina B7:\n \t\t\t la dosis recomendada es de 30 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en granos,  cereales, carnes, frijoles secos, huevos cocidos
+        y verduras. La deficiencia de vitamina B7 puede producir fatiga, depresión, náuseas y/o dermatitis.\n
+        \n
+        \t•	Vitamina B9:\n \t\t\t la dosis recomendada es de 400 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en cereales, verduras de hojas verdes, frijoles.
+        La deficiencia de vitamina B9 puede dar anemia, perturbaciones gastrointestinales, diarrea,
+        retraso en el crecimiento y/o defectos congénitos.\n
+        \n
+        \t•	Vitamina B12:\n \t\t\t la dosis recomendada es de 2.4µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en pescados, mariscos, carnes, leche, quesos y cereales.
+        La deficiencia de vitamina B12 puede dar anemia, cansancio, problemas de concentración,
+        hormigueo, hinchazón en la lengua.\n
+        \n
+        \t•	Vitamina C:\n \t\t\t la dosis recomendada es de 90 mg en hombres, 75 mg en mujeres\n
+        \t\t\t y se puede encontrar en frutas y verduras. La deficiencia de vitamina C puede causar
+        cicatrización lenta, inflamación y sangrado de la encías.\n
+        \n
+        \t•	Vitamina A:\n \t\t\t la dosis recomendada es de 900 µg/d en hombres, 700 µg/d en mujeres\n
+        \t\t\t y se puede encontrar en carnes, productos lácteos, leche, verduras y frutas.
+        La deficiencia de vitamina A se presenta con dificultad para adaptarse a la oscuridad o la ceguera nocturna.\n
+        \n
+        \t•	Vitamina D:\n \t\t\t la dosis recomendada es de 600 IU en hombres, mujeres\n
+        \t\t\t y se puede encontrar en pescados, mariscos, leche. La deficiencia de vitamina D
+        se presenta con debilidad y dolor en los huesos.\n
+        \n
+        \t•	Vitamina E:\n \t\t\t la dosis recomendada es de 15 mg/d en hombres y mujeres\n
+        \t\t\t y se puede encontrar en nueces, semillas, aceites vegetales, pescados y mariscos,
+        granos y verduras. La deficiencia de vitamina E provoca principalmente síntomas neurológicos,
+        inclusive equilibrio y coordinación deficiente, daños en los nervios sensoriales, debilidad
+        muscular y daños en la retina del ojo.\n
+        \n
+        \t•	Vitamina K:\n \t\t\t la dosis recomendada es de 120 µg/d en hombres, 90 µg/d en mujeres\n
+        \t\t\t y se puede encontrar en verduras de hoja verde y granos. La deficiencia de vitamina K
+        puede provocar moretones y problemas de sangrado debido a que la coagulación de la sangre es más lenta.\n
+        \n
+        \t•	Calcio:\n \t\t\t la dosis recomendada es de 1000 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en lácteos, alimentos fortificados, verduras: espinaca cocida,
+        brócoli y legumbres: frijoles secos. La deficiencia de calcio frena el desarrollo normal en los
+        niños, y en los adultos provoca pérdida de masa ósea.\n
+        \n
+        \t•	Fósforo:\n \t\t\t la dosis recomendada es de 700 mg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en lácteos, carnes, semillas, nueces, verduras: papa, maíz,
+        chícharo, brócoli. La deficiencia de fósforo se caracteriza por anemia y pérdida de peso.\n
+        \n
+        \t•	Magnesio:\n \t\t\t la dosis recomendada es de 400 mg en hombres, 310 mg en mujeres\n
+        \t\t\t y se puede encontrar en  nueces secas, cacahuates, patatas, verduras verdes,
+        legumbres, granos: germen de trigo, leche y productos lácteos, carnes. La deficiencia de
+        magnesio se puede presentar con fatiga inexplicable, ritmos cardíacos anormales, contracciones
+        oculares y espasmos musculares.\n
+        \n
+        \t•	Yodo:\n \t\t\t la dosis recomendada es de 150 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en sal yodada, leche y productos lácteos, mariscos y algas.
+        La deficiencia de yodo se puede presentar como bocio, hipotiroidismo, abortos espontáneos
+        y anomalías congénitas.\n
+        \n
+        \t•	Hierro:\n \t\t\t la dosis recomendada es de 8 mg en hombres y 18 mg en mujeres\n
+        \t\t\t y se puede encontrar en hígado ,cerdo, res, frijoles de soya, cereales fortificados,
+        pan, ciruelas pasas, albaricoques, uvas pasa y espinacas. La deficiencia de hierro se
+        puede presentar com anemia, disminución de termogénesis, aumento de probabilidad de parto
+        prematuro y reducción del tono vagal.\n
+        \n
+        \t•	Cobre:\n \t\t\t la dosis recomendada es de 900 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en papas, granos, frijoles secos, nueces, semillas y mariscos.
+        La deficiencia de cobre se puede presentar como anemia, neutropenia, debilidades
+        esqueléticas y formación defectuosa de elestina.\n
+        \n
+        \t•	Zinc:\n \t\t\t la dosis recomendada es de 11 mg en hombres y 8 mg en mujeres\n
+        \t\t\t y se puede encontrar en leche, productos lácteos, carnes: hígado, res, cangrejo,
+        cerdo, pollo, legumbres: frijol y chícharos, granos (fortificados), nueces y semillas.
+        La deficiencia de zinc se puede presentar como diarrea, anorexia, retraso en el
+        crecimiento, fotofobia, opacidades corneales, hipogeusia, hiposmia, hipogonadismo,
+        amenorrea, anemia, deterioro en la cicatrización de heridas, ronquera, problemas
+        neuropsiquiátricos, morbilidad perinatal, disminución de las células T, neutrófilos,
+        células natural killer (NK).\n
+        \n
+        \t•	Fluor:\n \t\t\t la dosis recomendada es de 4 mg en hombres, 3 mg en mujeres\n
+        \t\t\t y se puede encontrar en jugos, tés, uvas pasas, vino, agua embotellada.
+        La deficiencia de fluor se manifiesta como caries.\n
+        \n
+        \t•	Selenio:\n \t\t\t la dosis recomendada es de 55 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en carnes, mariscos y huevos. La deficiencia de selenio se
+        puede presentar como enfermedad de Keshan, infertilidad en los hombres, aumento de
+        probabilidad de cáncer de colon, recto, próstata, vejiga, piel, esófago, estómago,
+        problemas tiroideos y enfermedad de Kashin-Beck.\n
+        \n
+        \t•	Cromo:\n \t\t\t la dosis recomendada es de 35 µg en hombres, 25 µg en mujeres\n
+        \t\t\t y se puede encontrar en granos enteros, germen de trigo, hígado,carne, cerveza,
+        vino y ostiones. La deficiencia de cromo puede causar resistencia a la insulina,
+        problemas cardiacos o síndrome metabólico.\n
+        \n
+        \t•	Molibdeno:\n \t\t\t la dosis recomendada es de 45 µg en hombres y mujeres\n
+        \t\t\t y se puede encontrar en frijoles secos, granos, verdura de hoja verde oscura,
+        hígado, leche y lácteos. La deficiencia de molibdeno  se presenta como incremento de
+        la frecuencia cardíaca y respiratoria, ceguera nocturna y daños neurológicos que pueden llegar a coma.\n
+</string>
 
     <string name="facebook_application_id" translatable="false">321238591883834</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb321238591883834</string>
