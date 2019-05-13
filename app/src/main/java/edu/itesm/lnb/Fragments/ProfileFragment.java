@@ -10,7 +10,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +51,8 @@ public class ProfileFragment extends Fragment {
     private RecyclerView.Adapter adapter;
 
     private List<QuestionItem> listItems;
+    private RadioGroup radioGroup;
+    private Button evaluarBtn;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -97,6 +101,32 @@ public class ProfileFragment extends Fragment {
 
         loadRecyclerViewData(view);
 
+
+
+        evaluarBtn = (Button)view.findViewById(R.id.evaluarBtn);
+        evaluarBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new SugerenciasFragment();
+                getActivity().getSupportFragmentManager().beginTransaction().addToBackStack("TAG");
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.Container, fragment).commit();
+            }
+        });
+
+        radioGroup = (RadioGroup) recyclerView.findViewById(R.id.respuestas1);
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.respuesta1_1:
+                        System.out.println("ANSWER 1");
+                        break;
+                    case R.id.respuesta1_2:
+                        System.out.println("ANSWER 2");
+                        break;
+                }
+            }
+        });
         return view;
     }
 

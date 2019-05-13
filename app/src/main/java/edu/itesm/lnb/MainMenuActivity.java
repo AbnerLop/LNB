@@ -36,6 +36,7 @@ import edu.itesm.lnb.Fragments.FeedingFragment;
 import edu.itesm.lnb.Fragments.LactancyFragment;
 import edu.itesm.lnb.Fragments.MenuFragment;
 import edu.itesm.lnb.Fragments.ProfileFragment;
+import edu.itesm.lnb.Fragments.SugerenciasFragment;
 import edu.itesm.lnb.Fragments.YouthFragment;
 
 public class MainMenuActivity extends AppCompatActivity
@@ -47,7 +48,8 @@ public class MainMenuActivity extends AppCompatActivity
         ChildhoodFragment.OnFragmentInteractionListener,
         ElderlyFragment.OnFragmentInteractionListener,
         LactancyFragment.OnFragmentInteractionListener,
-        YouthFragment.OnFragmentInteractionListener
+        YouthFragment.OnFragmentInteractionListener,
+        SugerenciasFragment.OnFragmentInteractionListener
 {
 
     TextView userMail;
@@ -60,15 +62,6 @@ public class MainMenuActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -93,10 +86,8 @@ public class MainMenuActivity extends AppCompatActivity
             drawer.closeDrawer(GravityCompat.START);
         }
         else if (fm.getBackStackEntryCount() > 0) {
-            System.out.println("popping backstack");
             fm.popBackStack();
         } else {
-            System.out.println("nothing on backstack, calling super");
             super.onBackPressed();
         }
     }

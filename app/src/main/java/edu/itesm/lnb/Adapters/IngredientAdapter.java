@@ -51,7 +51,6 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
             super(itemView);
             textViewTitulo = itemView.findViewById(R.id.Title);
             textViewIngredientes = itemView.findViewById(R.id.id_ingrediente);
-            textViewPreparacion = itemView.findViewById(R.id.preparacion);
         }
     }
 
