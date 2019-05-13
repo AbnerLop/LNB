@@ -23,6 +23,46 @@ public class QAdapter extends RecyclerView.Adapter<QAdapter.QViewHolder>{
 
     private List<QuestionItem> listItems;
     private Context context;
+    private boolean primera;
+    private boolean segunda;
+    private boolean tercera;
+    private boolean cuarta;
+    private boolean quinta;
+    private boolean sexta;
+    private boolean septima;
+    private boolean octava;
+
+    public boolean isPrimera() {
+        return primera;
+    }
+
+    public boolean isSegunda() {
+        return segunda;
+    }
+
+    public boolean isTercera() {
+        return tercera;
+    }
+
+    public boolean isCuarta() {
+        return cuarta;
+    }
+
+    public boolean isQuinta() {
+        return quinta;
+    }
+
+    public boolean isSexta() {
+        return sexta;
+    }
+
+    public boolean isSeptima() {
+        return septima;
+    }
+
+    public boolean isOctava() {
+        return octava;
+    }
 
     public QAdapter(List<QuestionItem> listItems, Context context) {
         this.listItems = listItems;
@@ -42,19 +82,133 @@ public class QAdapter extends RecyclerView.Adapter<QAdapter.QViewHolder>{
         qViewHolder.question.setText(questionItem.getQuestion());
         qViewHolder.answer1.setText(questionItem.getAnswer1());
         qViewHolder.answer2.setText(questionItem.getAnswer2());
-        qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId){
-                    case R.id.respuesta1_1:
-                        System.out.println("ANSWER 1");
-                        break;
-                    case R.id.respuesta1_2:
-                        System.out.println("ANSWER 2");
-                        break;
-                }
-            }
-        });
+        switch (i){
+            case 0:
+                qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.respuesta1_1:
+                                primera = true;
+                                System.out.println("WOOO1");
+                                break;
+                            case R.id.respuesta1_2:
+                                primera = false;
+                                System.out.println("AWWW1");
+                                break;
+                        }
+                    }
+                });
+                break;
+            case 1:
+                qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.respuesta1_1:
+                                System.out.println("WOOO2");
+                                segunda = true;
+                                break;
+                            case R.id.respuesta1_2:
+                                segunda = false;
+                                System.out.println("AWWW2");
+                                break;
+                        }
+                    }
+                });
+                break;
+            case 2:
+                qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.respuesta1_1:
+                                tercera = true;
+                                break;
+                            case R.id.respuesta1_2:
+                                tercera = false;
+                                break;
+                        }
+                    }
+                });
+                break;
+            case 3:
+                qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.respuesta1_1:
+                                cuarta = true;
+                                break;
+                            case R.id.respuesta1_2:
+                                cuarta = false;
+                                break;
+                        }
+                    }
+                });
+                break;
+            case 4:
+                qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.respuesta1_1:
+                                quinta = true;
+                                break;
+                            case R.id.respuesta1_2:
+                                quinta = false;
+                                break;
+                        }
+                    }
+                });
+                break;
+            case 5:
+                qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.respuesta1_1:
+                                sexta = true;
+                                break;
+                            case R.id.respuesta1_2:
+                                sexta = false;
+                                break;
+                        }
+                    }
+                });
+                break;
+            case 6:
+                qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.respuesta1_1:
+                                septima = true;
+                                break;
+                            case R.id.respuesta1_2:
+                                septima = false;
+                                break;
+                        }
+                    }
+                });
+                break;
+            case 7:
+                qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                    @Override
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+                        switch (checkedId){
+                            case R.id.respuesta1_1:
+                                octava = true;
+                                break;
+                            case R.id.respuesta1_2:
+                                octava = false;
+                                break;
+                        }
+                    }
+                });
+                break;
+        }
+
     }
 
     @Override

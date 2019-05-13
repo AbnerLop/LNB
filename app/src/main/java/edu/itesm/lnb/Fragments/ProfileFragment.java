@@ -53,6 +53,7 @@ public class ProfileFragment extends Fragment {
     private List<QuestionItem> listItems;
     private RadioGroup radioGroup;
     private Button evaluarBtn;
+    private QAdapter adapterQ;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -108,6 +109,20 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Fragment fragment = new SugerenciasFragment();
+                Bundle args = new Bundle();
+                args.putBoolean("primeraP", adapterQ.isPrimera());
+                System.out.println("ADAPTER1 " + adapterQ.isPrimera());
+                args.putBoolean("segundaP", adapterQ.isSegunda());
+                System.out.println("ADAPTER2 " + adapterQ.isSegunda());
+                args.putBoolean("terceraP", adapterQ.isTercera());
+                System.out.println("ADAPTER3 " + adapterQ.isTercera());
+                args.putBoolean("cuartaP", adapterQ.isCuarta());
+                System.out.println("ADAPTER4 " + adapterQ.isCuarta());
+                args.putBoolean("quintaP", adapterQ.isQuinta());
+                args.putBoolean("sextaP", adapterQ.isSexta());
+                args.putBoolean("septimaP", adapterQ.isSeptima());
+                args.putBoolean("octavaP", adapterQ.isOctava());
+                fragment.setArguments(args);
                 getActivity().getSupportFragmentManager().beginTransaction().addToBackStack("TAG");
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.Container, fragment).commit();
             }
@@ -186,6 +201,7 @@ public class ProfileFragment extends Fragment {
         listItems.add(question8);
 
         adapter = new QAdapter(listItems, getActivity());
+        adapterQ = new QAdapter(listItems, getActivity());
         recyclerView.setAdapter(adapter);
     }
 

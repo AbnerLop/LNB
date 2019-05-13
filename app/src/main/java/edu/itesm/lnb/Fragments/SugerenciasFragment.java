@@ -65,6 +65,53 @@ public class SugerenciasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        if(getArguments().getBoolean("primerP")){
+            System.out.println("ARRIBA1");
+        }else{
+            System.out.println("ABAJO1");
+        }
+
+        if(getArguments().getBoolean("segundaP")){
+            System.out.println("ARRIBA2");
+        }else{
+            System.out.println("ABAJO2");
+        }
+
+        if(getArguments().getBoolean("terceraP")){
+            System.out.println("ARRIBA3");
+        }else{
+            System.out.println("ABAJO3");
+        }
+
+        if(getArguments().getBoolean("cuartaP")){
+            System.out.println("ARRIBA4");
+        }else{
+            System.out.println("ABAJO4");
+        }
+
+        if(getArguments().getBoolean("quintaP")){
+            System.out.println("ARRIBA5");
+        }else{
+            System.out.println("ABAJO5");
+        }
+
+        if(getArguments().getBoolean("sextaP")){
+            System.out.println("ARRIBA6");
+        }else{
+            System.out.println("ABAJO6");
+        }
+
+        if(getArguments().getBoolean("septimaP")){
+            System.out.println("ARRIBA7");
+        }else{
+            System.out.println("ABAJO7");
+        }
+
+        if(getArguments().getBoolean("octavaP")){
+            System.out.println("ARRIBA8");
+        }else{
+            System.out.println("ABAJO8");
+        }
         return inflater.inflate(R.layout.fragment_sugerencias, container, false);
     }
 
