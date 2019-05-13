@@ -7,8 +7,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.List;
@@ -40,6 +42,19 @@ public class QAdapter extends RecyclerView.Adapter<QAdapter.QViewHolder>{
         qViewHolder.question.setText(questionItem.getQuestion());
         qViewHolder.answer1.setText(questionItem.getAnswer1());
         qViewHolder.answer2.setText(questionItem.getAnswer2());
+        qViewHolder.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId){
+                    case R.id.respuesta1_1:
+                        System.out.println("ANSWER 1");
+                        break;
+                    case R.id.respuesta1_2:
+                        System.out.println("ANSWER 2");
+                        break;
+                }
+            }
+        });
     }
 
     @Override
@@ -52,6 +67,8 @@ public class QAdapter extends RecyclerView.Adapter<QAdapter.QViewHolder>{
         public TextView question;
         public RadioButton answer1;
         public RadioButton answer2;
+        private RadioGroup radioGroup;
+        private Button evaluarBtn;
 
         public QViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -59,6 +76,7 @@ public class QAdapter extends RecyclerView.Adapter<QAdapter.QViewHolder>{
             question = itemView.findViewById(R.id.pregunta1);
             answer1 = itemView.findViewById(R.id.respuesta1_1);
             answer2 = itemView.findViewById(R.id.respuesta1_2);
+            radioGroup = itemView.findViewById(R.id.respuestas1);
         }
     }
 }
