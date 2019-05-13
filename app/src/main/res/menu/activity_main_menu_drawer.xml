@@ -11,25 +11,13 @@
         <item
             android:id="@+id/nav_profile"
             android:icon="@drawable/ic_menu_manage"
-            android:title="Mi perfil" />
+            android:title="Mi alimentación" />
         <item
             android:id="@+id/nav_feeding"
             android:icon="@android:drawable/ic_menu_info_details"
-            android:title="Mi alimentación" />
+            android:title="Dietas" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Compartir" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Enviar" />
-        </menu>
-    </item>
 
     <item android:title="Account">
         <menu>

@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 
 /**
@@ -28,6 +29,7 @@ public class ProfileFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private ListView preguntas;
 
     public ProfileFragment() {
         // Required empty public constructor
@@ -64,6 +66,7 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        //preguntas = (ListView)getView().findViewById(R.id.preguntas);
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
