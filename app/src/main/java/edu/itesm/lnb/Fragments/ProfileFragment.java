@@ -112,7 +112,7 @@ public class ProfileFragment extends Fragment {
                 getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.Container, fragment).commit();
             }
         });
-
+        /*
         radioGroup = (RadioGroup) recyclerView.findViewById(R.id.respuestas1);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -126,7 +126,7 @@ public class ProfileFragment extends Fragment {
                         break;
                 }
             }
-        });
+        });*/
         return view;
     }
 
