@@ -141,10 +141,6 @@ public class MainMenuActivity extends AppCompatActivity
         } else if (id == R.id.nav_feeding) {
             fragment = new FeedingFragment();
             selectedFragment = true;
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
         } else if (id == R.id.nav_logout) {
             AuthUI.getInstance().signOut(MainMenuActivity.this).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
