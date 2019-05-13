@@ -113,20 +113,6 @@ public class ProfileFragment extends Fragment {
             }
         });
 
-        radioGroup = (RadioGroup) recyclerView.findViewById(R.id.respuestas1);
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-                switch (checkedId){
-                    case R.id.respuesta1_1:
-                        System.out.println("ANSWER 1");
-                        break;
-                    case R.id.respuesta1_2:
-                        System.out.println("ANSWER 2");
-                        break;
-                }
-            }
-        });
         return view;
     }
 
