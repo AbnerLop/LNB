@@ -67,6 +67,14 @@ public class QAdapter extends RecyclerView.Adapter<QAdapter.QViewHolder>{
     public QAdapter(List<QuestionItem> listItems, Context context) {
         this.listItems = listItems;
         this.context = context;
+        this.primera = true;
+        this.segunda = false;
+        this.tercera = true;
+        this.cuarta = true;
+        this.quinta = true;
+        this.sexta = true;
+        this.septima = true;
+        this.octava = true;
     }
 
     @NonNull
@@ -90,11 +98,9 @@ public class QAdapter extends RecyclerView.Adapter<QAdapter.QViewHolder>{
                         switch (checkedId){
                             case R.id.respuesta1_1:
                                 primera = true;
-                                System.out.println("WOOO1");
                                 break;
                             case R.id.respuesta1_2:
                                 primera = false;
-                                System.out.println("AWWW1");
                                 break;
                         }
                     }
@@ -106,12 +112,10 @@ public class QAdapter extends RecyclerView.Adapter<QAdapter.QViewHolder>{
                     public void onCheckedChanged(RadioGroup group, int checkedId) {
                         switch (checkedId){
                             case R.id.respuesta1_1:
-                                System.out.println("WOOO2");
                                 segunda = true;
                                 break;
                             case R.id.respuesta1_2:
                                 segunda = false;
-                                System.out.println("AWWW2");
                                 break;
                         }
                     }

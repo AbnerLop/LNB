@@ -48,7 +48,6 @@ public class ProfileFragment extends Fragment {
     private ListView preguntas;
 
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter adapter;
 
     private List<QuestionItem> listItems;
     private RadioGroup radioGroup;
@@ -90,7 +89,6 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        //preguntas = (ListView)getView().findViewById(R.id.preguntas);
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
@@ -111,13 +109,9 @@ public class ProfileFragment extends Fragment {
                 Fragment fragment = new SugerenciasFragment();
                 Bundle args = new Bundle();
                 args.putBoolean("primeraP", adapterQ.isPrimera());
-                System.out.println("ADAPTER1 " + adapterQ.isPrimera());
                 args.putBoolean("segundaP", adapterQ.isSegunda());
-                System.out.println("ADAPTER2 " + adapterQ.isSegunda());
                 args.putBoolean("terceraP", adapterQ.isTercera());
-                System.out.println("ADAPTER3 " + adapterQ.isTercera());
                 args.putBoolean("cuartaP", adapterQ.isCuarta());
-                System.out.println("ADAPTER4 " + adapterQ.isCuarta());
                 args.putBoolean("quintaP", adapterQ.isQuinta());
                 args.putBoolean("sextaP", adapterQ.isSexta());
                 args.putBoolean("septimaP", adapterQ.isSeptima());
@@ -200,9 +194,8 @@ public class ProfileFragment extends Fragment {
         );
         listItems.add(question8);
 
-        adapter = new QAdapter(listItems, getActivity());
         adapterQ = new QAdapter(listItems, getActivity());
-        recyclerView.setAdapter(adapter);
+        recyclerView.setAdapter(adapterQ);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
