@@ -171,6 +171,7 @@ public class ProfileFragment extends Fragment {
 
         adapter = new QAdapter(listItems, getActivity());
         recyclerView.setAdapter(adapter);
+        progressDialog.dismiss();
     }
 
     // TODO: Rename method, update argument and hook method into UI event
