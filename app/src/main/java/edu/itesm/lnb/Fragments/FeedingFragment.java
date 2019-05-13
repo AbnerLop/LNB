@@ -58,7 +58,7 @@ public class FeedingFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private static final String URL_DATA = "https://api.myjson.com/bins/lmhfw";
+    private static final String URL_DATA = "https://api.myjson.com/bins/1gh5h6";
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -146,7 +146,7 @@ public class FeedingFragment extends Fragment {
                                     RecetaItem recetaItem = new RecetaItem(
                                             titulo,
                                             ingredientesList,
-                                            new String(receta.getString("preparacion").getBytes("ISO-8859-1"), "UTF-8")
+                                            new String(receta.getString("preparacion").getBytes("ISO-8859-1"), "UTF-8"),
                                             receta.getString("imagen")
                                     );
                                     recetaItems.add(recetaItem);
