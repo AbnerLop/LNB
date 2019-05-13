@@ -10,9 +10,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import edu.itesm.lnb.Models.IngredientItem;
 import edu.itesm.lnb.R;
-import edu.itesm.lnb.Models.RecetaItem;
 
 public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.IngredientViewHolder> {
 
@@ -36,10 +34,7 @@ public class IngredientAdapter extends RecyclerView.Adapter<IngredientAdapter.In
     @Override
     public void onBindViewHolder(@NonNull IngredientAdapter.IngredientViewHolder recetaViewHolder, int i) {
         String recetaItem = listItems.get(i);
-
-        //recetaViewHolder.textViewTitulo.setText(titulo);
         recetaViewHolder.textViewIngredientes.setText(recetaItem);
-        //recetaViewHolder.textViewIngredientes.setText(listItems);
     }
 
     @Override

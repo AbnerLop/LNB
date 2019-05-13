@@ -46,7 +46,8 @@ public class NutriCard extends AppCompatActivity {
             RecetaItem item = new RecetaItem(
                     nutriCard.getRecetas().get(i).getTitulo(),
                     nutriCard.getRecetas().get(i).getIngredientes(),
-                    nutriCard.getRecetas().get(i).getPreparacion()
+                    nutriCard.getRecetas().get(i).getPreparacion(),
+                    nutriCard.getRecetas().get(i).getImgURL()
             );
             listItems.add(item);
         }

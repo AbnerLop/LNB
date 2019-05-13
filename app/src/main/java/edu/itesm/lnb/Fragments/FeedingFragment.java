@@ -145,7 +145,8 @@ public class FeedingFragment extends Fragment {
                                     RecetaItem recetaItem = new RecetaItem(
                                             titulo,
                                             ingredientesList,
-                                            receta.getString("preparacion")
+                                            receta.getString("preparacion"),
+                                            receta.getString("imagen")
                                     );
                                     recetaItems.add(recetaItem);
 

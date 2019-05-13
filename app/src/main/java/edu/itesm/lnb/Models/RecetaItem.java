@@ -7,11 +7,13 @@ public class RecetaItem implements Serializable {
     private String titulo;
     private List<String> ingredientes;
     private String preparacion;
+    private String imgURL;
 
-    public RecetaItem(String titulo, List<String> ingredientes, String preparacion) {
+    public RecetaItem(String titulo, List<String> ingredientes, String preparacion, String imgURL) {
         this.titulo = titulo;
         this.ingredientes = ingredientes;
         this.preparacion = preparacion;
+        this.imgURL = imgURL;
     }
 
     public String getTitulo() {
@@ -24,6 +26,10 @@ public class RecetaItem implements Serializable {
 
     public String getPreparacion() {
         return preparacion;
+    }
+
+    public String getImgURL() {
+        return imgURL;
     }
 
     public String niceString() {
