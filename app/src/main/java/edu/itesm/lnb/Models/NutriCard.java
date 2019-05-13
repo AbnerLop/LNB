@@ -1,16 +1,16 @@
-package edu.itesm.lnb;
+package edu.itesm.lnb.Models;
 
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.TextView;
-
-import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.itesm.lnb.R;
+import edu.itesm.lnb.Adapters.RecetaAdapter;
 
 public class NutriCard extends AppCompatActivity {
 

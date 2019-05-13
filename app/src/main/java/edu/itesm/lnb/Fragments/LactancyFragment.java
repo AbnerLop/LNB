@@ -1,4 +1,4 @@
-package edu.itesm.lnb;
+package edu.itesm.lnb.Fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,16 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import edu.itesm.lnb.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link YouthFragment.OnFragmentInteractionListener} interface
+ * {@link LactancyFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link YouthFragment#newInstance} factory method to
+ * Use the {@link LactancyFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class YouthFragment extends Fragment {
+public class LactancyFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +31,7 @@ public class YouthFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public YouthFragment() {
+    public LactancyFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class YouthFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment YouthFragment.
+     * @return A new instance of fragment LactancyFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static YouthFragment newInstance(String param1, String param2) {
-        YouthFragment fragment = new YouthFragment();
+    public static LactancyFragment newInstance(String param1, String param2) {
+        LactancyFragment fragment = new LactancyFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +66,8 @@ public class YouthFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_youth, container, false);
+
+        return inflater.inflate(R.layout.fragment_lactancy, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -103,5 +106,6 @@ public class YouthFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onAgeFragmentInteraction(Uri uri);    }
+        void onAgeFragmentInteraction(Uri uri);
+    }
 }

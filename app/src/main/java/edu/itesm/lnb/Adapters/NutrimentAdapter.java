@@ -1,8 +1,7 @@
-package edu.itesm.lnb;
+package edu.itesm.lnb.Adapters;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -12,8 +11,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.io.Serializable;
 import java.util.List;
+
+import edu.itesm.lnb.Models.NutriCard;
+import edu.itesm.lnb.Models.NutrimentItem;
+import edu.itesm.lnb.R;
 
 public class NutrimentAdapter extends RecyclerView.Adapter<NutrimentAdapter.ViewHolder> {
 
@@ -43,7 +45,6 @@ public class NutrimentAdapter extends RecyclerView.Adapter<NutrimentAdapter.View
             @Override
             public void onClick(View v) {
                 NutrimentItem nutriCard = nutrimentItems.get(viewHolder.getAdapterPosition());
-                Toast.makeText(context, "", Toast.LENGTH_SHORT).show();
                 Intent it = new Intent(context, NutriCard.class);
                 it.putExtra("nutrimento", nutriCard);
                 context.startActivity(it);

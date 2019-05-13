@@ -1,4 +1,4 @@
-package edu.itesm.lnb;
+package edu.itesm.lnb.Fragments;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,16 +8,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import edu.itesm.lnb.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ElderlyFragment.OnFragmentInteractionListener} interface
+ * {@link ChildhoodFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ElderlyFragment#newInstance} factory method to
+ * Use the {@link ChildhoodFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ElderlyFragment extends Fragment {
+public class ChildhoodFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +31,7 @@ public class ElderlyFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ElderlyFragment() {
+    public ChildhoodFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +41,11 @@ public class ElderlyFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment ElderlyFragment.
+     * @return A new instance of fragment ChildhoodFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ElderlyFragment newInstance(String param1, String param2) {
-        ElderlyFragment fragment = new ElderlyFragment();
+    public static ChildhoodFragment newInstance(String param1, String param2) {
+        ChildhoodFragment fragment = new ChildhoodFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,7 +66,7 @@ public class ElderlyFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_elderly, container, false);
+        return inflater.inflate(R.layout.fragment_childhood, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -103,6 +105,5 @@ public class ElderlyFragment extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onAgeFragmentInteraction(Uri uri);
-    }
+        void onAgeFragmentInteraction(Uri uri);    }
 }

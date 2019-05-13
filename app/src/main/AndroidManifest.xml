@@ -11,7 +11,8 @@
         android:roundIcon="@drawable/logo_full"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NutriCard"></activity>
+        <activity android:name=".Models.NutriCard"></activity>
+        <activity android:name=".Models.IngredientCard"></activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".DetailActivity" />
         <activity

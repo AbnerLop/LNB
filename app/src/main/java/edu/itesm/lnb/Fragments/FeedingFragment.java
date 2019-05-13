@@ -1,12 +1,10 @@
-package edu.itesm.lnb;
+package edu.itesm.lnb.Fragments;
 
-import android.app.LauncherActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -27,6 +25,12 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import edu.itesm.lnb.Adapters.NutrimentAdapter;
+import edu.itesm.lnb.Models.IngredientItem;
+import edu.itesm.lnb.Models.NutrimentItem;
+import edu.itesm.lnb.R;
+import edu.itesm.lnb.Models.RecetaItem;
 
 
 /**
@@ -53,7 +57,7 @@ public class FeedingFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private static final String URL_DATA = "https://api.myjson.com/bins/9wvaa";
+    private static final String URL_DATA = "https://api.myjson.com/bins/lmhfw";
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -146,6 +150,7 @@ public class FeedingFragment extends Fragment {
                                             receta.getString("preparacion")
                                     );
                                     recetaItems.add(recetaItem);
+
                                 }
 
                                 NutrimentItem item = new NutrimentItem(

@@ -16,11 +16,18 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/Title"
+                android:id="@+id/id_ingrediente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nombre"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/preparacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textSize="20sp" />
 
         </LinearLayout>
 

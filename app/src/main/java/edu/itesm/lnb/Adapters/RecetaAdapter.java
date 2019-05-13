@@ -1,15 +1,23 @@
-package edu.itesm.lnb;
+package edu.itesm.lnb.Adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.List;
+
+import edu.itesm.lnb.Models.IngredientCard;
+import edu.itesm.lnb.Models.NutriCard;
+import edu.itesm.lnb.Models.NutrimentItem;
+import edu.itesm.lnb.R;
+import edu.itesm.lnb.Models.RecetaItem;
 
 public class RecetaAdapter extends RecyclerView.Adapter<RecetaAdapter.RecetaViewHolder> {
 
@@ -29,12 +37,19 @@ public class RecetaAdapter extends RecyclerView.Adapter<RecetaAdapter.RecetaView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecetaAdapter.RecetaViewHolder viewHolder, int i) {
-        RecetaItem recetaItem = listItems.get(i);
+    public void onBindViewHolder(@NonNull final RecetaAdapter.RecetaViewHolder viewHolder, int i) {
+        final RecetaItem recetaItem = listItems.get(i);
         viewHolder.textViewTitulo.setText(recetaItem.getTitulo());
-        //test
-        viewHolder.textViewIngredientes.setText(recetaItem.niceString());
-        viewHolder.textViewPreparacion.setText(recetaItem.getTitulo());
+
+        viewHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                RecetaItem recetaCard = listItems.get(viewHolder.getAdapterPosition());
+                Intent it = new Intent(context, IngredientCard.class);
+                it.putExtra("receta", recetaCard);
+                context.startActivity(it);
+            }
+        });
     }
 
     @Override
@@ -45,15 +60,13 @@ public class RecetaAdapter extends RecyclerView.Adapter<RecetaAdapter.RecetaView
     public  class RecetaViewHolder extends RecyclerView.ViewHolder{
 
         public TextView textViewTitulo;
-        public TextView textViewIngredientes;
-        public TextView textViewPreparacion;
+        public LinearLayout linearLayout;
 
         public RecetaViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            textViewTitulo = itemView.findViewById(R.id.id_titulo);
-            textViewIngredientes = itemView.findViewById(R.id.id_ingredientes);
-            textViewPreparacion = itemView.findViewById(R.id.preparacion);
+            textViewTitulo = itemView.findViewById(R.id.Title);
+            linearLayout = itemView.findViewById(R.id.linearLayoutReceta);
         }
     }
 }

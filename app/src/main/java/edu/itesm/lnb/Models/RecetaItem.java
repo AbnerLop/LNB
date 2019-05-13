@@ -1,4 +1,4 @@
-package edu.itesm.lnb;
+package edu.itesm.lnb.Models;
 
 import java.io.Serializable;
 import java.util.List;

@@ -2,9 +2,7 @@ package edu.itesm.lnb;
 
 import android.app.FragmentManager;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
@@ -30,6 +28,15 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseUser;
+
+import edu.itesm.lnb.Fragments.AdultFragment;
+import edu.itesm.lnb.Fragments.ChildhoodFragment;
+import edu.itesm.lnb.Fragments.ElderlyFragment;
+import edu.itesm.lnb.Fragments.FeedingFragment;
+import edu.itesm.lnb.Fragments.LactancyFragment;
+import edu.itesm.lnb.Fragments.MenuFragment;
+import edu.itesm.lnb.Fragments.ProfileFragment;
+import edu.itesm.lnb.Fragments.YouthFragment;
 
 public class MainMenuActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,
