@@ -6,13 +6,19 @@
     android:id="@+id/container"
     >
 
-
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
 
         <LinearLayout
             android:padding="@dimen/activity_horizontal_margin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_weight="1.0">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -50,4 +56,7 @@
 
 
         </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

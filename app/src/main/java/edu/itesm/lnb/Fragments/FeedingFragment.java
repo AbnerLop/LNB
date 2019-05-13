@@ -23,6 +23,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -130,22 +131,22 @@ public class FeedingFragment extends Fragment {
                             JSONArray elementos = o.getJSONArray("elementos");
                             for (int j = 0; j < elementos.length(); j++){
                                 JSONObject elemento = elementos.getJSONObject(j);
-                                String elementoName = elemento.getString("nombre");
+                                String elementoName = new String(elemento.getString("nombre").getBytes("ISO-8859-1"), "UTF-8");
                                 JSONArray recetas = elemento.getJSONArray("recetas");
                                 List<RecetaItem> recetaItems = new ArrayList<>();
                                 for (int k = 0; k < recetas.length(); k++){
                                     JSONObject receta = recetas.getJSONObject(k);
-                                    String titulo = receta.getString("titulo");
+                                    String titulo = new String(receta.getString("titulo").getBytes("ISO-8859-1"), "UTF-8");
                                     JSONArray ingredientes = receta.getJSONArray("ingredientes");
                                     List<String> ingredientesList = new ArrayList<String>();
                                     for(int l = 0; l < ingredientes.length(); l++){
                                         JSONObject ingrediente = ingredientes.getJSONObject(l);
-                                        ingredientesList.add(ingrediente.getString("nombre"));
+                                        ingredientesList.add(new String(ingrediente.getString("nombre").getBytes("ISO-8859-1"), "UTF-8"));
                                     }
                                     RecetaItem recetaItem = new RecetaItem(
                                             titulo,
                                             ingredientesList,
-                                            receta.getString("preparacion")
+                                            new String(receta.getString("preparacion").getBytes("ISO-8859-1"), "UTF-8")
                                     );
                                     recetaItems.add(recetaItem);
 
@@ -166,6 +167,8 @@ public class FeedingFragment extends Fragment {
                     adapter = new NutrimentAdapter(listItems, getActivity());
                     recyclerView.setAdapter(adapter);
                 } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
             }

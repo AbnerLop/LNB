@@ -686,7 +686,7 @@
 
     <string name="pregunta8">¿Qué cantidad de azucares (bebidas o alimentos) consumes al día?</string>
     <string name="respuesta8_1">Menos de 25 gramos</string>
-    <string name="respuesta8_2">25 gramos o más</string>
+    <string name="respuesta8_2">25no gramos o más</string>
 
     <string name="facebook_application_id" translatable="false">321238591883834</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb321238591883834</string>
