@@ -28,10 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import edu.itesm.lnb.Adapters.NutrimentAdapter;
-import edu.itesm.lnb.Models.IngredientItem;
 import edu.itesm.lnb.Models.NutrimentItem;
-import edu.itesm.lnb.R;
 import edu.itesm.lnb.Models.RecetaItem;
+import edu.itesm.lnb.R;
 
 
 /**
@@ -58,7 +57,7 @@ public class FeedingFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private static final String URL_DATA = "https://api.myjson.com/bins/lmhfw";
+    private static final String URL_DATA = "https://api.myjson.com/bins/1gh5h6";
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -98,13 +97,11 @@ public class FeedingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_feeding, container, false);
 
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        recyclerView = view.findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        //puede dar error
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         listItems = new ArrayList<>();
@@ -146,7 +143,7 @@ public class FeedingFragment extends Fragment {
                                     RecetaItem recetaItem = new RecetaItem(
                                             titulo,
                                             ingredientesList,
-                                            new String(receta.getString("preparacion").getBytes("ISO-8859-1"), "UTF-8")
+                                            new String(receta.getString("preparacion").getBytes("ISO-8859-1"), "UTF-8"),
                                             receta.getString("imagen")
                                     );
                                     recetaItems.add(recetaItem);

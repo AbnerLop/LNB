@@ -658,35 +658,69 @@
 
     <string name="pregunta1">¿Qué cantidad de frutas y verduras consumes al día?</string>
     <string name="respuesta1_1">Menos de 5 porciones</string>
+    <string name="respuestaApp1_1">La OMS recomienda un consumo mínimo de 5 porciones al día (400g)
+        de frutas y verduras, ya que estas nos aportan muchas vitaminas y minerales, además de aportarnos
+        importantes cantidades de antioxidantes y fibra.</string>
     <string name="respuesta1_2">5 porciones o más</string>
+    <string name="respuestaApp1_2">¡Bien hecho! La OMS recomienda un consumo mínimo de 5 porciones
+        al día (400g) de frutas y verduras, ya que estas nos aportan muchas vitaminas y minerales, además
+        de aportarnos importantes cantidades de antioxidantes y fibra.</string>
 
     <string name="pregunta2">¿Qué cantidad de leguminosas (frijoles, entejas, habas, garbanzo, etc.) consumes al día?</string>
     <string name="respuesta2_1">Menos de 2 porciones</string>
+    <string name="respuestaApp2_1">La OMS recomienda un consumo mínimo de 2 porciones de leguminosas al día,
+        ya que están nos aportan fibra, proteína y ácido fólico.</string>
     <string name="respuesta2_2">2 porciones o más</string>
+    <string name="respuestaApp2_2">¡Bien hecho! La OMS recomienda un consumo mínimo de 2 porciones de
+        leguminosas al día, ya que están nos aportan fibra, proteína y ácido fólico.</string>
 
     <string name="pregunta3">¿Qué cantidad de pescado consumes a la semana?</string>
     <string name="respuesta3_1">Menos de 240 gramos</string>
+    <string name="respuestaApp3_1">La OMS recomienda un consumo mínimo de 240 gramos, o consumir dos
+        veces a la semana pescados, ya que estos nos aportan cantidades importantes de zinc y omega-3.</string>
     <string name="respuesta3_2">240 gramos o más</string>
+    <string name="respuestaApp3_2">¡Bien hecho! La OMS recomienda un consumo mínimo de 240 gramos,
+        o consumir dos veces a la semana pescados, ya que estos nos aportan cantidades importantes
+        de zinc y omega-3. </string>
 
     <string name="pregunta4">¿Qué cantidad de leche consumes al día?</string>
     <string name="respuesta4_1">Menos de 2 tazas </string>
+    <string name="respuestaApp4_1">La OMS recomienda un consumo de 2 tazas al día (480ml) de leche,
+        ya que esta nos aporta gran cantidad de calcio, fósforo y vitamina D. </string>
     <string name="respuesta4_2">2 tazas o más</string>
+    <string name="respuestaApp4_2">¡Bien hecho! La OMS recomienda un consumo de 2 tazas al día
+        (480ml) de leche, ya que esta nos aporta gran cantidad de calcio, fósforo y vitamina D.</string>
 
     <string name="pregunta5">¿Qué cantidad de alimentos de carnes rojas consumes a la semana?</string>
     <string name="respuesta5_1">Menos de 500 gramos</string>
+    <string name="respuestaApp5_1">¡Bien hecho! La OMS recomienda un consumo máximo de 500 gramos a
+        la semana carnes rojas, ya que estas nos aportan gran cantidad de hierro, proteína y vitamina A.</string>
     <string name="respuesta5_2">500 gramos o más</string>
+    <string name="respuestaApp5_2">La OMS recomienda un consumo máximo de 500 gramos a la semana
+        carnes rojas, ya que estas nos aportan gran cantidad de hierro, proteína y vitamina A.  </string>
 
     <string name="pregunta6">¿Qué cantidad de agua consumes al día?</string>
     <string name="respuesta6_1">Menos de 2 litros</string>
+    <string name="respuestaApp6_1">¡Bien hecho! La OMS recomienda un consumo mínimo de 2 litros
+        de agua al día. </string>
     <string name="respuesta6_2">2 litros o más</string>
+    <string name="respuestaApp6_2">La OMS recomienda un consumo mínimo de 2 litros de agua al día.</string>
 
     <string name="pregunta7">¿Qué cantidad de embutidos (jamón, salchichas, etc.) consumes a la semana?</string>
     <string name="respuesta7_1">Menos de 2 porciones</string>
+    <string name="respuestaApp7_1">¡Bien hecho! El consumo máximo de embutidos debe ser menor de 2
+        porciones a la semana, ya que estos contienen nitritos y nitratos que pueden ser componentes cancerígenos.</string>
     <string name="respuesta7_2">2 porciones o más</string>
+    <string name="respuestaApp7_2">El consumo máximo de embutidos debe ser menor de 2 porciones a
+        la semana, ya que estos contienen nitritos y nitratos que pueden ser componentes cancerígenos.</string>
 
     <string name="pregunta8">¿Qué cantidad de azucares (bebidas o alimentos) consumes al día?</string>
     <string name="respuesta8_1">Menos de 25 gramos</string>
+    <string name="respuestaApp8_1">¡Bien hecho! La OMS recomienda un consumo máximo de 25 gramos
+        de azúcares al día (5 cucharaditas). </string>
     <string name="respuesta8_2">25no gramos o más</string>
+    <string name="respuestaApp8_2">La OMS recomienda un consumo máximo de 25 gramos de azúcares al
+        día (5 cucharaditas). </string>
 
     <string name="facebook_application_id" translatable="false">321238591883834</string>
     <string name="facebook_login_protocol_scheme" translatable="false">fb321238591883834</string>
