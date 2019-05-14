@@ -7,7 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 import edu.itesm.lnb.R;
 
@@ -39,6 +42,9 @@ public class SugerenciasFragment extends Fragment {
     private TextView respuestaApp6;
     private TextView respuestaApp7;
     private TextView respuestaApp8;
+    private Button magia;
+    private ArrayList<String> nutrimentosSugeridos;
+    private boolean dietas;
 
     public SugerenciasFragment() {
         // Required empty public constructor
@@ -76,6 +82,7 @@ public class SugerenciasFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_sugerencias, container, false);
+        nutrimentosSugeridos = new ArrayList<String>();
         respuestaApp1 = view.findViewById(R.id.respuestaApp1);
         respuestaApp2 = view.findViewById(R.id.respuestaApp2);
         respuestaApp3 = view.findViewById(R.id.respuestaApp3);
@@ -84,6 +91,8 @@ public class SugerenciasFragment extends Fragment {
         respuestaApp6 = view.findViewById(R.id.respuestaApp6);
         respuestaApp7 = view.findViewById(R.id.respuestaApp7);
         respuestaApp8 = view.findViewById(R.id.respuestaApp8);
+        dietas = false;
+        magia = view.findViewById(R.id.magia);
 
         String respuesta1_1 = view.getContext().getResources().getString(R.string.respuestaApp1_1);
         String respuesta1_2 = view.getContext().getResources().getString(R.string.respuestaApp1_2);
@@ -118,18 +127,27 @@ public class SugerenciasFragment extends Fragment {
             respuestaApp3.setText(respuesta3_1);
         }else{
             respuestaApp3.setText(respuesta3_2);
+            nutrimentosSugeridos.add("Zinc");
+            dietas = true;
         }
 
         if(getArguments().getBoolean("cuartaP")){
             respuestaApp4.setText(respuesta4_1);
         }else{
             respuestaApp4.setText(respuesta4_2);
+            nutrimentosSugeridos.add("Calcio");
+            nutrimentosSugeridos.add("Fósforo");
+            nutrimentosSugeridos.add("Vitamina D");
+            dietas = true;
         }
 
         if(getArguments().getBoolean("quintaP")){
             respuestaApp5.setText(respuesta5_1);
         }else{
             respuestaApp5.setText(respuesta5_2);
+            nutrimentosSugeridos.add("Hierro");
+            nutrimentosSugeridos.add("Vitamina A");
+            dietas = true;
         }
 
         if(getArguments().getBoolean("sextaP")){
@@ -149,6 +167,22 @@ public class SugerenciasFragment extends Fragment {
         }else{
             respuestaApp8.setText(respuesta8_2);
         }
+        if(dietas){
+            magia.setVisibility(View.VISIBLE);
+        }
+
+        magia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new FeedingFragment();
+                Bundle args = new Bundle();
+                args.putStringArrayList("nutrimentos", nutrimentosSugeridos);
+                fragment.setArguments(args);
+                getActivity().getSupportFragmentManager().beginTransaction().addToBackStack("TAG");
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.Container, fragment).commit();
+            }
+        });
+
         return view;
     }
 

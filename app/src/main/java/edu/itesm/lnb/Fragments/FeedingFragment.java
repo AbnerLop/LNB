@@ -33,6 +33,8 @@ import edu.itesm.lnb.Models.RecetaItem;
 import edu.itesm.lnb.R;
 
 
+
+
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
@@ -106,10 +108,15 @@ public class FeedingFragment extends Fragment {
 
         listItems = new ArrayList<>();
 
-        loadRecyclerViewData();
+        if(getArguments() == null){
+            loadRecyclerViewData();
+        }else{
+            loadRecyclerViewData2();
+        }
 
         return view;
     }
+
 
     private void loadRecyclerViewData() {
         final ProgressDialog progressDialog = new ProgressDialog(getActivity());
@@ -161,6 +168,91 @@ public class FeedingFragment extends Fragment {
 
 
 
+
+                    adapter = new NutrimentAdapter(listItems, getActivity());
+                    recyclerView.setAdapter(adapter);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                progressDialog.dismiss();
+                Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
+        requestQueue.add(stringRequest);
+    }
+
+    private void loadRecyclerViewData2() {
+        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setMessage("Loading data");
+        progressDialog.show();
+        final ArrayList<String> nutrimentosSug = getArguments().getStringArrayList("nutrimentos");
+
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_DATA, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                progressDialog.dismiss();
+                try {
+                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray array = jsonObject.getJSONArray("nutrimentos");
+                    for (int i = 0; i < array.length(); i++){
+                        JSONObject o = array.getJSONObject(i);
+                        JSONArray elementos = o.getJSONArray("elementos");
+                        for (int j = 0; j < elementos.length(); j++){
+                            /*
+
+                             */
+                            JSONObject elemento = elementos.getJSONObject(j);
+                            String elementoName = new String(elemento.getString("nombre").getBytes("ISO-8859-1"), "UTF-8");
+                            JSONObject newElemento = new JSONObject();
+                            JSONArray newElementoArray = new JSONArray();
+                            for(int h = 0; h < nutrimentosSug.size(); h++){
+                                if(elementoName == nutrimentosSug.get(h)){
+                                    newElementoArray.put(elemento);
+                                }
+                            }
+                            newElemento.put("newDietas", newElementoArray);
+                            System.out.println("--------------" + newElementoArray.length());
+                            System.out.println("**************" + newElemento.toString());
+                            JSONArray recetas = newElemento.getJSONArray("recetas");
+                            /*
+
+                             */
+                            List<RecetaItem> recetaItems = new ArrayList<>();
+                            for (int k = 0; k < recetas.length(); k++){
+                                JSONObject receta = recetas.getJSONObject(k);
+                                String titulo = new String(receta.getString("titulo").getBytes("ISO-8859-1"), "UTF-8");
+                                JSONArray ingredientes = receta.getJSONArray("ingredientes");
+                                List<String> ingredientesList = new ArrayList<String>();
+                                for(int l = 0; l < ingredientes.length(); l++){
+                                    JSONObject ingrediente = ingredientes.getJSONObject(l);
+                                    ingredientesList.add(new String(ingrediente.getString("nombre").getBytes("ISO-8859-1"), "UTF-8"));
+                                }
+                                RecetaItem recetaItem = new RecetaItem(
+                                        titulo,
+                                        ingredientesList,
+                                        new String(receta.getString("preparacion").getBytes("ISO-8859-1"), "UTF-8"),
+                                        receta.getString("imagen")
+                                );
+                                recetaItems.add(recetaItem);
+
+                            }
+
+                            NutrimentItem item = new NutrimentItem(
+                                    elementoName,
+                                    recetaItems
+
+                            );
+                            listItems.add(item);
+                        }
+                    }
 
                     adapter = new NutrimentAdapter(listItems, getActivity());
                     recyclerView.setAdapter(adapter);
