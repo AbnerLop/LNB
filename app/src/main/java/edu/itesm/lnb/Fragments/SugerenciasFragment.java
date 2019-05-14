@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import edu.itesm.lnb.R;
 
@@ -29,6 +30,15 @@ public class SugerenciasFragment extends Fragment {
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+
+    private TextView respuestaApp1;
+    private TextView respuestaApp2;
+    private TextView respuestaApp3;
+    private TextView respuestaApp4;
+    private TextView respuestaApp5;
+    private TextView respuestaApp6;
+    private TextView respuestaApp7;
+    private TextView respuestaApp8;
 
     public SugerenciasFragment() {
         // Required empty public constructor
@@ -65,54 +75,81 @@ public class SugerenciasFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_sugerencias, container, false);
+        respuestaApp1 = view.findViewById(R.id.respuestaApp1);
+        respuestaApp2 = view.findViewById(R.id.respuestaApp2);
+        respuestaApp3 = view.findViewById(R.id.respuestaApp3);
+        respuestaApp4 = view.findViewById(R.id.respuestaApp4);
+        respuestaApp5 = view.findViewById(R.id.respuestaApp5);
+        respuestaApp6 = view.findViewById(R.id.respuestaApp6);
+        respuestaApp7 = view.findViewById(R.id.respuestaApp7);
+        respuestaApp8 = view.findViewById(R.id.respuestaApp8);
+
+        String respuesta1_1 = view.getContext().getResources().getString(R.string.respuestaApp1_1);
+        String respuesta1_2 = view.getContext().getResources().getString(R.string.respuestaApp1_2);
+        String respuesta2_1 = view.getContext().getResources().getString(R.string.respuestaApp2_1);
+        String respuesta2_2 = view.getContext().getResources().getString(R.string.respuestaApp2_2);
+        String respuesta3_1 = view.getContext().getResources().getString(R.string.respuestaApp3_1);
+        String respuesta3_2 = view.getContext().getResources().getString(R.string.respuestaApp3_2);
+        String respuesta4_1 = view.getContext().getResources().getString(R.string.respuestaApp4_1);
+        String respuesta4_2 = view.getContext().getResources().getString(R.string.respuestaApp4_2);
+        String respuesta5_1 = view.getContext().getResources().getString(R.string.respuestaApp5_1);
+        String respuesta5_2 = view.getContext().getResources().getString(R.string.respuestaApp5_2);
+        String respuesta6_1 = view.getContext().getResources().getString(R.string.respuestaApp6_1);
+        String respuesta6_2 = view.getContext().getResources().getString(R.string.respuestaApp6_2);
+        String respuesta7_1 = view.getContext().getResources().getString(R.string.respuestaApp7_1);
+        String respuesta7_2 = view.getContext().getResources().getString(R.string.respuestaApp7_2);
+        String respuesta8_1 = view.getContext().getResources().getString(R.string.respuestaApp8_1);
+        String respuesta8_2 = view.getContext().getResources().getString(R.string.respuestaApp8_2);
+
         if(getArguments().getBoolean("primerP")){
-            System.out.println("ARRIBA1");
+            respuestaApp1.setText(respuesta1_1);
         }else{
-            System.out.println("ABAJO1");
+            respuestaApp1.setText(respuesta1_2);
         }
 
         if(getArguments().getBoolean("segundaP")){
-            System.out.println("ARRIBA2");
+            respuestaApp2.setText(respuesta2_1);
         }else{
-            System.out.println("ABAJO2");
+            respuestaApp2.setText(respuesta2_2);
         }
 
         if(getArguments().getBoolean("terceraP")){
-            System.out.println("ARRIBA3");
+            respuestaApp3.setText(respuesta3_1);
         }else{
-            System.out.println("ABAJO3");
+            respuestaApp3.setText(respuesta3_2);
         }
 
         if(getArguments().getBoolean("cuartaP")){
-            System.out.println("ARRIBA4");
+            respuestaApp4.setText(respuesta4_1);
         }else{
-            System.out.println("ABAJO4");
+            respuestaApp4.setText(respuesta4_2);
         }
 
         if(getArguments().getBoolean("quintaP")){
-            System.out.println("ARRIBA5");
+            respuestaApp5.setText(respuesta5_1);
         }else{
-            System.out.println("ABAJO5");
+            respuestaApp5.setText(respuesta5_2);
         }
 
         if(getArguments().getBoolean("sextaP")){
-            System.out.println("ARRIBA6");
+            respuestaApp6.setText(respuesta6_1);
         }else{
-            System.out.println("ABAJO6");
+            respuestaApp6.setText(respuesta6_2);
         }
 
         if(getArguments().getBoolean("septimaP")){
-            System.out.println("ARRIBA7");
+            respuestaApp7.setText(respuesta7_1);
         }else{
-            System.out.println("ABAJO7");
+            respuestaApp7.setText(respuesta7_2);
         }
 
         if(getArguments().getBoolean("octavaP")){
-            System.out.println("ARRIBA8");
+            respuestaApp8.setText(respuesta8_1);
         }else{
-            System.out.println("ABAJO8");
+            respuestaApp8.setText(respuesta8_2);
         }
-        return inflater.inflate(R.layout.fragment_sugerencias, container, false);
+        return view;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
