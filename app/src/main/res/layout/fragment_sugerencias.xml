@@ -2,81 +2,98 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Fragments.SugerenciasFragment"
     android:orientation="vertical">>
 
     <!-- TODO: Update blank fragment layout -->
 
+    <ScrollView
+        android:paddingLeft="10dp"
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
 
-        <TextView
-            android:id="@+id/respuestaApp1"
-            android:paddingTop="15dp"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Respuesta"
-            android:textSize="25sp" />
+            android:orientation="vertical"
+            android:layout_weight="1.0">
 
-        <TextView
-            android:id="@+id/respuestaApp2"
-            android:paddingTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Respuesta"
-            android:textSize="25sp" />
+            <TextView
+                android:id="@+id/respuestaApp1"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Respuesta"
+                android:textSize="25sp" />
 
-        <TextView
-            android:paddingTop="15dp"
-            android:id="@+id/respuestaApp3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Respuesta"
-            android:textSize="25sp" />
+            <TextView
+                android:id="@+id/respuestaApp2"
+                android:paddingTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Respuesta"
+                android:textSize="25sp" />
 
-        <TextView
-            android:paddingTop="15dp"
-            android:id="@+id/respuestaApp4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Respuesta"
-            android:textSize="25sp" />
+            <TextView
+                android:paddingTop="15dp"
+                android:id="@+id/respuestaApp3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Respuesta"
+                android:textSize="25sp" />
 
-        <TextView
-            android:paddingTop="15dp"
-            android:id="@+id/respuestaApp5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Respuesta"
-            android:textSize="25sp" />
+            <TextView
+                android:paddingTop="15dp"
+                android:id="@+id/respuestaApp4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Respuesta"
+                android:textSize="25sp" />
 
-        <TextView
-            android:paddingTop="15dp"
-            android:id="@+id/respuestaApp6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Respuesta"
-            android:textSize="25sp" />
+            <TextView
+                android:paddingTop="15dp"
+                android:id="@+id/respuestaApp5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Respuesta"
+                android:textSize="25sp" />
 
-        <TextView
-            android:paddingTop="15dp"
-            android:id="@+id/respuestaApp7"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Respuesta"
-            android:textSize="25sp" />
+            <TextView
+                android:paddingTop="15dp"
+                android:id="@+id/respuestaApp6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Respuesta"
+                android:textSize="25sp" />
 
-        <TextView
-            android:paddingTop="15dp"
-            android:id="@+id/respuestaApp8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Respuesta"
-            android:textSize="25sp"
-            android:paddingBottom="15dp"/>
+            <TextView
+                android:paddingTop="15dp"
+                android:id="@+id/respuestaApp7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Respuesta"
+                android:textSize="25sp" />
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Magia"/>
+            <TextView
+                android:paddingTop="15dp"
+                android:id="@+id/respuestaApp8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Respuesta"
+                android:textSize="25sp"
+                android:paddingBottom="15dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Magia"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
