@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 intent.putExtra("EXTRA_USER_EMAIL", user.getEmail());
                 intent.putExtra("EXTRA_USER_IMG", user.getPhotoUrl());
                 startActivity(intent); // Go, go, go
+                finish();
             }
             else{
                 if (response != null){

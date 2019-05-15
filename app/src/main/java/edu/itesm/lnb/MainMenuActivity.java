@@ -92,6 +92,8 @@ public class MainMenuActivity extends AppCompatActivity
             fm.popBackStack();
         } else {
             super.onBackPressed();
+            startActivity(new Intent(MainMenuActivity.this, MainMenuActivity.class));
+            finish();
         }
     }
 

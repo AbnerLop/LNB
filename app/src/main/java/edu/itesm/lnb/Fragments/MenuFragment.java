@@ -108,7 +108,7 @@ public class MenuFragment extends Fragment implements AdultFragment.OnFragmentIn
                 break;
         }
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        fragmentTransaction.addToBackStack("TAGG");
+        //fragmentTransaction.addToBackStack("TAGG");
         if(selectedFragment){
             fragmentTransaction.replace(R.id.Container, fragment).commit();
         }
@@ -119,6 +119,7 @@ public class MenuFragment extends Fragment implements AdultFragment.OnFragmentIn
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_menu, container, false);
+
 
         View btn1 = rootView.findViewById(R.id.adult);
         View btn2 = rootView.findViewById(R.id.childhood);
