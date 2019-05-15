@@ -1,6 +1,8 @@
 package edu.itesm.lnb;
 
 import android.app.FragmentManager;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -23,6 +25,10 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.security.ProviderInstaller;
 import com.google.firebase.auth.FirebaseAuth;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -52,7 +58,8 @@ public class MainMenuActivity extends AppCompatActivity
         LactancyFragment.OnFragmentInteractionListener,
         YouthFragment.OnFragmentInteractionListener,
         SugerenciasFragment.OnFragmentInteractionListener,
-        FilteredFragment.OnFragmentInteractionListener
+        FilteredFragment.OnFragmentInteractionListener,
+        ProviderInstaller.ProviderInstallListener
 {
 
     TextView userMail;
@@ -61,6 +68,8 @@ public class MainMenuActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ProviderInstaller.installIfNeededAsync(this, this);
+        installServiceProviderIfNeeded(this);
         setContentView(R.layout.activity_main_menu);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -184,5 +193,33 @@ public class MainMenuActivity extends AppCompatActivity
         navMail.setText(user.getEmail());
         Glide.with(this).load(user.getPhotoUrl()).into(navImage);
 
+    }
+
+    @Override
+    public void onProviderInstalled() {
+
+    }
+
+    @Override
+    public void onProviderInstallFailed(int errorCode, Intent intent) {
+
+    }
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+
+    }
+    public static void installServiceProviderIfNeeded(Context context) {
+        try {
+            ProviderInstaller.installIfNeeded(context);
+        } catch (GooglePlayServicesRepairableException e) {
+            e.printStackTrace();
+
+            // Prompt the user to install/update/enable Google Play services.
+            GooglePlayServicesUtil.showErrorNotification(e.getConnectionStatusCode(), context);
+
+        } catch (GooglePlayServicesNotAvailableException e) {
+            e.printStackTrace();
+        }
     }
 }

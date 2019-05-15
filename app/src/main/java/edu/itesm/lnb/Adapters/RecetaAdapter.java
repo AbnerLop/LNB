@@ -16,6 +16,9 @@ import com.bumptech.glide.Glide;
 
 import java.util.List;
 
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLSocketFactory;
+
 import edu.itesm.lnb.Models.IngredientCard;
 import edu.itesm.lnb.R;
 import edu.itesm.lnb.Models.RecetaItem;
@@ -41,6 +44,9 @@ public class RecetaAdapter extends RecyclerView.Adapter<RecetaAdapter.RecetaView
     public void onBindViewHolder(@NonNull final RecetaAdapter.RecetaViewHolder viewHolder, int i) {
         final RecetaItem recetaItem = listItems.get(i);
         viewHolder.textViewTitulo.setText(recetaItem.getTitulo());
+        HostnameVerifier hostnameVerifier = org.apache.http.conn.ssl.SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER;
+
+
         Glide.with(context).load(listItems.get(i).getImgURL()).into(viewHolder.image);
         viewHolder.constraintLayoutReceta.setOnClickListener(new View.OnClickListener() {
             @Override

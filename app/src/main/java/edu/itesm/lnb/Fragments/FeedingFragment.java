@@ -59,7 +59,7 @@ public class FeedingFragment extends Fragment {
         // Required empty public constructor
     }
 
-    private static final String URL_DATA = "https://api.myjson.com/bins/14u0qq";
+    private static final String URL_DATA = "http://api.myjson.com/bins/14u0qq";
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
