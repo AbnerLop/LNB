@@ -59,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intent = new Intent( LoginActivity.this  , MainMenuActivity.class  );
                 intent.putExtra("EXTRA_USER_NAME", user.getDisplayName());
                 intent.putExtra("EXTRA_USER_EMAIL", user.getEmail());
+                intent.putExtra("EXTRA_USER_IMG", user.getPhotoUrl());
                 startActivity(intent); // Go, go, go
             }
             else{

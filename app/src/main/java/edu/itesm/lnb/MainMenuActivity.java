@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.firebase.ui.auth.AuthUI;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -179,6 +180,7 @@ public class MainMenuActivity extends AppCompatActivity
 
         navUsername.setText(user.getDisplayName());
         navMail.setText(user.getEmail());
+        Glide.with(this).load(user.getPhotoUrl()).into(navImage);
 
     }
 }

@@ -53,7 +53,7 @@ public class FilteredFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    private static final String URL_DATA = "https://api.myjson.com/bins/1gh5h6";
+    private static final String URL_DATA = "https://api.myjson.com/bins/14u0qq";
 
     private List<NutrimentItem> listItems;
     private RecyclerView recyclerView;
