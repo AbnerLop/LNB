@@ -60,6 +60,7 @@ public class LoginActivity extends AppCompatActivity {
                 intent.putExtra("EXTRA_USER_NAME", user.getDisplayName());
                 intent.putExtra("EXTRA_USER_EMAIL", user.getEmail());
                 startActivity(intent); // Go, go, go
+                finish();
             }
             else{
                 if (response != null){
