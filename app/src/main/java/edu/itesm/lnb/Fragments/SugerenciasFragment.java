@@ -174,7 +174,7 @@ public class SugerenciasFragment extends Fragment {
         magia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new FeedingFragment();
+                Fragment fragment = new FilteredFragment();
                 Bundle args = new Bundle();
                 args.putStringArrayList("nutrimentos", nutrimentosSugeridos);
                 fragment.setArguments(args);

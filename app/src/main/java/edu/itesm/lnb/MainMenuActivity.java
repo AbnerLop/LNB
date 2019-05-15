@@ -33,6 +33,7 @@ import edu.itesm.lnb.Fragments.AdultFragment;
 import edu.itesm.lnb.Fragments.ChildhoodFragment;
 import edu.itesm.lnb.Fragments.ElderlyFragment;
 import edu.itesm.lnb.Fragments.FeedingFragment;
+import edu.itesm.lnb.Fragments.FilteredFragment;
 import edu.itesm.lnb.Fragments.LactancyFragment;
 import edu.itesm.lnb.Fragments.MenuFragment;
 import edu.itesm.lnb.Fragments.ProfileFragment;
@@ -49,7 +50,8 @@ public class MainMenuActivity extends AppCompatActivity
         ElderlyFragment.OnFragmentInteractionListener,
         LactancyFragment.OnFragmentInteractionListener,
         YouthFragment.OnFragmentInteractionListener,
-        SugerenciasFragment.OnFragmentInteractionListener
+        SugerenciasFragment.OnFragmentInteractionListener,
+        FilteredFragment.OnFragmentInteractionListener
 {
 
     TextView userMail;

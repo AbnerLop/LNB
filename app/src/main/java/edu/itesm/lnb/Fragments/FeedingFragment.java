@@ -107,12 +107,15 @@ public class FeedingFragment extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         listItems = new ArrayList<>();
-
+/*
         if(getArguments() == null){
             loadRecyclerViewData();
         }else{
             loadRecyclerViewData2();
         }
+        */
+
+        loadRecyclerViewData();
 
         return view;
     }
@@ -188,7 +191,7 @@ public class FeedingFragment extends Fragment {
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
     }
-
+/*
     private void loadRecyclerViewData2() {
         final ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage("Loading data");
@@ -206,9 +209,7 @@ public class FeedingFragment extends Fragment {
                         JSONObject o = array.getJSONObject(i);
                         JSONArray elementos = o.getJSONArray("elementos");
                         for (int j = 0; j < elementos.length(); j++){
-                            /*
 
-                             */
                             JSONObject elemento = elementos.getJSONObject(j);
                             String elementoName = new String(elemento.getString("nombre").getBytes("ISO-8859-1"), "UTF-8");
                             JSONObject newElemento = new JSONObject();
@@ -222,9 +223,8 @@ public class FeedingFragment extends Fragment {
                             System.out.println("--------------" + newElementoArray.length());
                             System.out.println("**************" + newElemento.toString());
                             JSONArray recetas = newElemento.getJSONArray("recetas");
-                            /*
 
-                             */
+
                             List<RecetaItem> recetaItems = new ArrayList<>();
                             for (int k = 0; k < recetas.length(); k++){
                                 JSONObject receta = recetas.getJSONObject(k);
@@ -273,6 +273,7 @@ public class FeedingFragment extends Fragment {
         RequestQueue requestQueue = Volley.newRequestQueue(getActivity());
         requestQueue.add(stringRequest);
     }
+    */
 
     // TODO: Rename method, update argument and hook method into UI event
     public void onButtonPressed(Uri uri) {
